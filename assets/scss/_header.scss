@@ -1,3 +1,6 @@
+@import "mixins";
+@import "variables";
+
 .header {
   padding: 0.75rem 0;
   background: #fffc;
@@ -18,28 +21,40 @@
     gap: 2.5rem;
     // nav__logo
     &__logo {
-      @include font(1.5rem, 500, 0.75rem, #16a34a);
+      max-width: 160px;
+      display: block;
+      img {
+        width: 100%;
+      }
     }
     // nav-list
     &-list {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 22px;
       // nav-list__item
       // nav-list__item-link
       &__item-link {
         @include font(0.875rem, 400, 12px, #212121);
         transition: color 0.15s ease;
-        &:hover {
-          color: #22c55e;
+        &:hover,
+        &.active {
+          color: $yellow;
         }
       }
     }
   }
-  // header__lang & header__login
-  &__lang,
-  &__login {
-    @include font(0.875rem, 400, 0.75rem, #212121);
+  // header__phone
+  &__phone {
+    @include font(0.875rem, 400, 0.75rem, $dark);
+    transition: color 0.15s ease;
+    &:hover {
+      color: $yellow;
+    }
+  }
+  // header__lang
+  &__lang {
+    @include font(0.875rem, 400, 0.75rem, $dark);
     padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 8px;
