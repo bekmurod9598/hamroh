@@ -1,0 +1,86 @@
+@import "mixins";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 1024px;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (max-width: 640px) {
+    max-width: 100%;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #eee;
+}
+
+// main body
+.main {
+  margin-top: 61.5px; // header-height: ;
+  padding: 3rem 0;
+  .slider {
+    width: 100%;
+    height: 370px;
+    figure {
+      overflow: hidden;
+      border-radius: 8px;
+      width: 100%;
+      height: 100%;
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// each section
+.section {
+  margin-bottom: 4rem;
+  &__title {
+    @include font(2.25rem, 700, 2.5rem, #212121);
+    margin-bottom: 2rem;
+  }
+}
+
+// load more button
+.load-more {
+  @include font(1rem, 500, 1rem, #fff);
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #22c55e;
+  transition: opacity 0.15s ease;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.7;
+  }
+}

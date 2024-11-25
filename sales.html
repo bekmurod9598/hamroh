@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/sales.css" /> // css
+    <link rel="stylesheet" href="./assets/icons/fontawesome/css/all.min.css" /> // icons
+    <title>Hamroh</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header id="header" class="header">
+      <div class="container header__nav-wrapper">
+        <!-- navbar -->
+        <nav class="nav">
+          <a href="#header" class="nav__logo">Hamroh</a>
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a href="./index.html" class="nav-list__item-link">Biz haqimizda</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="./sales.html" class="nav-list__item-link">Aksiyalar</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- login -->
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-telegram"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+          <a href="tel:+998999363098">
+            <i class="fa-solid fa-phone-volume"></i>
+            99 9363098
+          </a>
+          <button class="header__lang">
+            <img src="./assets/img/uz.png" alt="" /> Uz
+          </button>
+          <button class="header__login">Kirish</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="container main">
+      <!-- slider -->
+      <section class="container section slider">
+        <figure><img src="https://picsum.photos/1400/900" alt="" /></figure>
+      </section>
+
+      <!-- sales -->
+      <section id="sales" class="container section">
+        <h2 class="section__title">Aksiyalar</h2>
+        <!-- sales wrapper -->
+        <div class="sales-wrapper">
+          <article class="sales-card">
+            <!-- img -->
+            <figure class="sales-card__figure">
+              <img
+                class="sales-card__figure-img"
+                loading="lazy"
+                src="https://picsum.photos/900/800"
+                alt=""
+              />
+            </figure>
+            <!-- description -->
+            <div class="sales-card__info">
+              <div>
+                <span class="sales-card__datetime"
+                  >11.24.2024 - 11.12.2024</span
+                >
+                <h3 class="sales-card__title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h3>
+                <p class="sales-card__description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+                  excepturi consequuntur libero mollitia inventore quisquam...
+                </p>
+              </div>
+
+              <div class="sales-card__action">
+                <span><i class="fa-regular fa-eye"></i> 78</span>
+                <a href="./slug.html">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="sales-card">
+            <!-- img -->
+            <figure class="sales-card__figure">
+              <img
+                class="sales-card__figure-img"
+                loading="lazy"
+                src="https://picsum.photos/900/800"
+                alt=""
+              />
+            </figure>
+            <!-- description -->
+            <div class="sales-card__info">
+              <div>
+                <span class="sales-card__datetime"
+                  >11.24.2024 - 11.12.2024</span
+                >
+                <h3 class="sales-card__title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h3>
+                <p class="sales-card__description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+                  excepturi consequuntur libero mollitia inventore quisquam...
+                </p>
+              </div>
+
+              <div class="sales-card__action">
+                <span><i class="fa-regular fa-eye"></i> 78</span>
+                <a href="./slug.html">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article class="sales-card">
+            <!-- img -->
+            <figure class="sales-card__figure">
+              <img
+                class="sales-card__figure-img"
+                loading="lazy"
+                src="https://picsum.photos/900/800"
+                alt=""
+              />
+            </figure>
+            <!-- description -->
+            <div class="sales-card__info">
+              <div>
+                <span class="sales-card__datetime"
+                  >11.24.2024 - 11.12.2024</span
+                >
+                <h3 class="sales-card__title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </h3>
+                <p class="sales-card__description">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+                  excepturi consequuntur libero mollitia inventore quisquam...
+                </p>
+              </div>
+
+              <div class="sales-card__action">
+                <span><i class="fa-regular fa-eye"></i> 78</span>
+                <a href="./slug.html">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- load more button -->
+        <div style="margin-top: 1.5rem; display: flex; justify-content: center">
+          <button class="load-more">Ko'proq yuklash 10</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer"></footer>
+
+    <!-- SCRIPT -->
+     <script src="./js/sales.js"></script>
+  </body>
+</html>
