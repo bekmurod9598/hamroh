@@ -1,7 +1,7 @@
-@import "base";
 @import "mixins";
-@import "header";
 @import "variables";
+@import "base";
+@import "header";
 
 .sales-wrapper {
   display: grid;
@@ -21,6 +21,9 @@
   overflow: hidden;
   background: #fff;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
   // sales-card__figure
   &__figure {
@@ -67,7 +70,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      i{
+      i {
         color: #21212180;
       }
     }

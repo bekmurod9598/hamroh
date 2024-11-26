@@ -1,7 +1,7 @@
-@import "base";
 @import "mixins";
-@import "header";
 @import "variables";
+@import "base";
+@import "header";
 @import "swiper/swiper-bundle.min.css";
 
 .swiper {
@@ -9,10 +9,69 @@
   height: 370px;
   background: #ddd;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 1.5rem;
   overflow: hidden;
   .swiper-slide {
     width: 100%;
     height: 100%;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50%;
+  border: 1px solid rgb(229, 231, 235);
+  background: rgba(255, 255, 255, 0.3);
+  &::after {
+    color: #fff;
+    font-size: 18px !important;
+    font-weight: 900;
+  }
+}
+
+.swiper-pagination {
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+  }
+  .swiper-pagination-bullet-active {
+    background: $yellow;
+  }
+}
+
+// CATEGORIES
+.categories {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  // categories__card
+  &__card {
+    width: 100%;
+    height: 200px;
+    // categories__card-img
+    &-img {
+      width: 100%;
+      height: 140px;
+      overflow: hidden;
+      background: #99e4ad;
+      border-radius: 8px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    // categories__card-title
+    &-title {
+      @include font(1.125rem, 400, 1.75rem, $blue);
+      margin-top: 1.25rem;
+      text-align: center;
+    }
   }
 }

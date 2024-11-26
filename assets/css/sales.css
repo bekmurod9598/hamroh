@@ -20,9 +20,9 @@ a {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1344px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 @media screen and (max-width: 1024px) {
   .container {
@@ -42,12 +42,11 @@ a {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #eee;
 }
 
 .main {
   margin-top: 61.5px;
-  padding: 3rem 0;
+  padding: 2rem 0 0;
 }
 
 .section {
@@ -84,6 +83,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 9999;
 }
 .header__nav-wrapper {
   display: flex;
@@ -176,6 +176,7 @@ body {
   overflow: hidden;
   background: #fff;
   border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 .sales-card__figure {
   width: 100%;
