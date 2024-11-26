@@ -46,7 +46,7 @@ body {
 
 .main {
   margin-top: 61.5px;
-  padding: 2rem 0 0;
+  padding-top: 2rem;
 }
 
 .section {
@@ -60,7 +60,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.load-more {
+.base-button {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1rem;
@@ -71,8 +71,16 @@ body {
   transition: opacity 0.15s ease;
   cursor: pointer;
 }
-.load-more:hover {
+.base-button i {
+  margin-left: 5px;
+  transform: translateX(-5px);
+  transition: transform 0.15s ease;
+}
+.base-button:hover {
   opacity: 0.7;
+}
+.base-button:hover i {
+  transform: translateX(0);
 }
 
 .header {
@@ -154,22 +162,6 @@ body {
   height: 16px;
 }
 
-.sales-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-@media screen and (max-width: 768px) {
-  .sales-wrapper {
-    grid-template-columns: repeat(2, minmax(280px, 1fr));
-  }
-}
-@media screen and (max-width: 600px) {
-  .sales-wrapper {
-    grid-template-columns: repeat(1, minmax(280px, 1fr));
-  }
-}
-
 .sales-card {
   width: 100%;
   height: 550px;
@@ -224,13 +216,10 @@ body {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 1rem;
-  color: #212121;
+  color: rgba(33, 33, 33, 0.5019607843);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-}
-.sales-card__action span i {
-  color: rgba(33, 33, 33, 0.5019607843);
 }
 .sales-card__action a {
   display: inline-flex;
@@ -245,6 +234,22 @@ body {
 }
 .sales-card__action a:hover {
   opacity: 0.7;
+}
+
+.sales-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .sales-wrapper {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+@media screen and (max-width: 600px) {
+  .sales-wrapper {
+    grid-template-columns: repeat(1, minmax(280px, 1fr));
+  }
 }
 
 /*# sourceMappingURL=sales.css.map */

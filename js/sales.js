@@ -1,8 +1,4 @@
 "use strict";
-
-const salesCard = document.createElement("div");
-const salesWrap = document.querySelector(".sales-wrapper");
-
 class Sales {
   constructor(img, alt = "", validityPeriod, title, description, view) {
     this.img = img;
@@ -42,7 +38,7 @@ class Sales {
         </div>
 
         <div class="sales-card__action">
-          <span><i class="fa-regular fa-eye"></i> ${this.view} ta</span>
+          <span><i class="fa-regular fa-eye"></i> ${this.view}</span>
           <a href="./sales-slug.html">
             <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -55,7 +51,7 @@ class Sales {
 
 let fragment = new DocumentFragment();
 
-const sales = [1, 2, 3];
+const sales = [1, 2, 3, 4, 5, 6];
 sales.forEach((item) => {
   const el = new Sales(
     `https://picsum.photos/id/${452 + item}/900/800`,

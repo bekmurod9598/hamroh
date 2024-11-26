@@ -3,6 +3,7 @@
 @import "base";
 @import "header";
 @import "swiper/swiper-bundle.min.css";
+@import 'sales-card';
 
 .swiper {
   width: 100%;
@@ -73,5 +74,16 @@
       margin-top: 1.25rem;
       text-align: center;
     }
+  }
+}
+
+// SHORT SALES
+.short-sales {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 2rem;
+  // short-sales__card
+  &__card {
+    width: 100%;
   }
 }

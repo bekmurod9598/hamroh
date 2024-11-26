@@ -43,7 +43,7 @@ body {
 // main body
 .main {
   margin-top: 61.5px; // header-height: ;
-  padding: 2rem 0 0;
+  padding-top: 2rem;
 }
 
 // each section
@@ -55,15 +55,23 @@ body {
   }
 }
 
-// load more button
-.load-more {
+// base button
+.base-button {
   @include font(1rem, 500, 1rem, #fff);
   padding: 1rem;
   border-radius: 8px;
   background: $blue;
   transition: opacity 0.15s ease;
   cursor: pointer;
+  i {
+    margin-left: 5px;
+    transform: translateX(-5px);
+    transition: transform 0.15s ease;
+  }
   &:hover {
     opacity: 0.7;
+    i {
+      transform: translateX(0);
+    }
   }
 }
