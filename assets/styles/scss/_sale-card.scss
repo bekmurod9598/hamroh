@@ -48,12 +48,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    // view count
     span {
       @include font(0.75rem, 400, 1rem, $light-dark);
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
     }
+    // slug link
     a {
       display: inline-flex;
       align-items: center;

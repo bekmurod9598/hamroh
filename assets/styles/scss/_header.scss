@@ -33,7 +33,7 @@
       // nav-list__item
       // nav-list__item-link
       &__item-link {
-        @include font(0.875rem, 400, 12px, #212121);
+        @include font(0.875rem, 400, 12px, $blue);
         transition: color 0.15s ease;
         &:hover,
         &.active {
