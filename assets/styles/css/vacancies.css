@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ruda:wght@400..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button,
+input,
+select {
+  outline: none;
+  border: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1344px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.main {
+  margin-top: 61.5px;
+  padding-top: 2rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+.section__title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  color: #111827;
+  margin-bottom: 2rem;
+}
+.section__subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: #111827;
+}
+.section__description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.base-button {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1rem;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #012573;
+  transition: opacity 0.15s ease;
+  cursor: pointer;
+}
+.base-button i {
+  margin-left: 5px;
+  transform: translateX(-5px);
+  transition: transform 0.15s ease;
+}
+.base-button:hover {
+  opacity: 0.7;
+}
+.base-button:hover i {
+  transform: translateX(0);
+}
+
+.header {
+  padding: 0.75rem 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(24px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.header__nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.header .nav__logo {
+  max-width: 160px;
+  display: block;
+}
+.header .nav__logo img {
+  width: 100%;
+}
+.header .nav-list {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.header .nav-list__item-link {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 12px;
+  color: #012573;
+  transition: color 0.15s ease;
+}
+.header .nav-list__item-link:hover, .header .nav-list__item-link.active {
+  color: #ffcc00;
+}
+.header__phone {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+  color: #111827;
+  transition: color 0.15s ease;
+}
+.header__phone:hover {
+  color: #ffcc00;
+}
+.header__lang {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+  color: #111827;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+.header__lang:hover {
+  opacity: 0.7;
+}
+.header__lang {
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  padding: 0;
+}
+.header__lang img {
+  width: 24px;
+  height: 16px;
+}
+
+.footer {
+  background: #f3f4f6;
+  padding: 3.25rem 0;
+}
+
+.footer .nav {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .nav__logo {
+  max-width: 160px;
+  display: block;
+}
+.footer .nav__logo img {
+  width: 100%;
+}
+.footer .nav-social-networks {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.footer .nav-social-networks a {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+  color: #ffcc00;
+  transition: opacity 0.15s ease;
+}
+.footer .nav-social-networks a:hover {
+  opacity: 0.7;
+}
+.footer .nav-list__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.footer .nav-list__item-link {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+  color: rgba(33, 33, 33, 0.5019607843);
+  transition: color 0.15s ease;
+}
+.footer .nav-list__item-link:hover, .footer .nav-list__item-link.active {
+  color: #ffcc00;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=vacancies.css.map */
