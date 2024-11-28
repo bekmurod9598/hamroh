@@ -22,6 +22,10 @@
     margin-top: 2rem;
     a {
       @include font(1.25rem, 400, 0.75rem, $yellow);
+      transition: opacity .15s ease;
+      &:hover{
+        opacity: .7;
+      }
     }
   }
   // nav-list
@@ -34,7 +38,8 @@
     &-link {
       @include font(1rem, 400, 0.75rem, $light-dark);
       transition: color 0.15s ease;
-      &:hover {
+      &:hover,
+      &.active {
         color: $yellow;
         text-decoration: underline;
       }

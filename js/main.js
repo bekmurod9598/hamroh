@@ -16,7 +16,7 @@ const pages = [
 const currentPath = window.location.pathname;
 
 // Validate URLs if `index.html`
-if (currentPath.endsWith("index.html")) {
+if (currentPath.endsWith("index.html") || currentPath === "/") {
   pages.forEach((page) => {
     if (page.url !== "../index.html") {
       page.url = `pages/${page.url}`;
@@ -24,18 +24,21 @@ if (currentPath.endsWith("index.html")) {
   });
 }
 
-// Create a navbar
-const navbar = document.querySelector(
-  ".header .header__nav-wrapper .nav .nav-list"
-);
-// Created fragment
-const navbarFragment = new DocumentFragment();
+console.log(pages);
 
-if (navbar) {
+// Create a navbar
+const headerNavbar = document.querySelector(".header #nav-list");
+const footerNavbar = document.querySelector(".footer #nav-list");
+
+// Created fragment
+const headerFragment = new DocumentFragment();
+const footerFragment = new DocumentFragment();
+
+if (headerNavbar && footerNavbar) {
   pages.forEach((page) => {
-    const li = document.createElement("li");
+    const headerLi = document.createElement("li");
     const link = document.createElement("a");
-    li.classList.add("nav-list__item");
+    headerLi.classList.add("nav-list__item");
     link.classList.add("nav-list__item-link");
     link.textContent = page.name;
     link.href = page.url;
@@ -46,9 +49,14 @@ if (navbar) {
     ) {
       link.classList.add("active");
     }
-    li.append(link);
-    navbarFragment.append(li);
+    headerLi.append(link);
+    headerFragment.append(headerLi);
+
+    // Footer link (independent from header)
+    const footerLi = headerLi.cloneNode(true); // Clone header link for footer
+    footerFragment.append(footerLi);
   });
 }
 
-navbar.append(navbarFragment);
+headerNavbar.append(headerFragment);
+footerNavbar.append(footerFragment);

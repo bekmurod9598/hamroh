@@ -49,9 +49,19 @@ body {
 // each section
 .section {
   margin-bottom: 4rem;
+  // section__title
   &__title {
-    @include font(2.25rem, 700, 2.5rem, #212121);
+    @include font(2.25rem, 700, 2.5rem, $dark);
     margin-bottom: 2rem;
+  }
+  // section__subtitle
+  &__subtitle {
+    @include font(1.2rem, 600, 1.5rem, $dark);
+  }
+  // section__description
+  &__description {
+    @include font(1rem, 400, 1.5rem, $dark);
+    margin-bottom: 1rem;
   }
 }
 

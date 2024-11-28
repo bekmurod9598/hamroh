@@ -126,7 +126,7 @@ class ShortSales {
 
         <div class="sales-card__action">
           <span><i class="fa-regular fa-eye"></i> ${this.view}</span>
-          <a href="./sales-slug.html">
+          <a href="pages/sales-slug.html">
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
