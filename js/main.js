@@ -10,6 +10,18 @@ const pages = [
     name: "Aksiyalar",
     url: "sales.html",
   },
+  {
+    name: "Do'konlarimiz",
+    url: "stores.html",
+  },
+  {
+    name: "Vakansiyalar",
+    url: "vacancies.html",
+  },
+  {
+    name: "Kontakt",
+    url: "contact.html",
+  },
 ];
 
 // Check if the current page is `index.html' or another file
@@ -23,8 +35,6 @@ if (currentPath.endsWith("index.html") || currentPath === "/") {
     }
   });
 }
-
-console.log(pages);
 
 // Create a navbar
 const headerNavbar = document.querySelector(".header #nav-list");

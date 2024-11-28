@@ -6,7 +6,8 @@
 }
 
 button,
-input {
+input,
+select {
   outline: none;
   border: none;
 }
@@ -425,6 +426,68 @@ body {
 }
 .short-sales__card {
   width: 100%;
+}
+
+.store-addresses .select-input {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: #111827;
+  border: 1px solid #ddd;
+  padding: 0.75rem 1.5rem;
+  width: 250px;
+  border-radius: 8px;
+}
+.store-addresses .store-branches {
+  width: 30%;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-y: auto;
+  padding-right: 0.75rem;
+}
+.store-addresses .store-branches__search-input {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: #111827;
+  border: 1px solid #ddd;
+  padding: 0.75rem 1.5rem;
+  width: 250px;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+.store-addresses .store-branches__item {
+  padding: 12px;
+  background: #ccf2d6;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.store-addresses .store-branches__item:hover, .store-addresses .store-branches__item.active {
+  background: #fff;
+  border-color: #a6e6b7;
+}
+.store-addresses .store-branches__item i {
+  font-size: 1.5rem;
+  color: #ffcc00;
+}
+.store-addresses .store-branches__item-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.2rem;
+  color: #111827;
+}
+.store-addresses .store-branches__item-subtitle {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: #111827;
 }
 
 /*# sourceMappingURL=main.css.map */
