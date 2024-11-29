@@ -49,6 +49,10 @@ body {
 .main {
   margin-top: 61.5px; // header-height: ;
   padding-top: 2rem;
+  // main__title
+  &__title {
+    @include font(2rem, 700, 2rem, $dark);
+  }
 }
 
 // each section

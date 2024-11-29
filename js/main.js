@@ -11,7 +11,7 @@ const pages = [
     url: "sales.html",
   },
   {
-    name: "Do'konlarimiz",
+    name: "Do'konlar",
     url: "stores.html",
   },
   {
@@ -19,7 +19,7 @@ const pages = [
     url: "vacancies.html",
   },
   {
-    name: "Kontakt",
+    name: "Aloqa",
     url: "contact.html",
   },
 ];
