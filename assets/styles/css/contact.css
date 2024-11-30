@@ -52,6 +52,12 @@ body {
   margin-top: 61.5px;
   padding-top: 2rem;
 }
+.main__title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #111827;
+}
 
 .section {
   margin-bottom: 4rem;
@@ -224,6 +230,59 @@ body {
 .footer .nav-list__item-link:hover, .footer .nav-list__item-link.active {
   color: #ffcc00;
   text-decoration: underline;
+}
+
+.form-wrap {
+  display: grid;
+  place-content: center;
+  margin: 2rem 0 3rem;
+}
+.form-wrap__title {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  color: #111827;
+  margin-bottom: 2rem;
+}
+.form-wrap .form {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.form-wrap .form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.form-wrap .form-item input,
+.form-wrap .form-item textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+.form-wrap .form-item input:hover, .form-wrap .form-item input:focus,
+.form-wrap .form-item textarea:hover,
+.form-wrap .form-item textarea:focus {
+  border-color: #ffcc00;
+}
+.form-wrap .form-item textarea {
+  height: 100px;
+  outline: none;
+}
+.form-wrap .form__submit {
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1rem;
+  color: #fff;
+  padding: 1rem;
+  background: #012573;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=contact.css.map */

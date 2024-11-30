@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../assets/img/logo/H.png" type="png" />
     <link rel="stylesheet" href="../assets/styles/css/contact.css" />
-    <link rel="stylesheet" href="../assets/icons/fontawesome/css/all.min.css">
-    <title>Kontakt</title>
+    <link rel="stylesheet" href="../assets/icons/fontawesome/css/all.min.css" />
+    <title>Aloqa</title>
   </head>
   <body>
     <!-- HEADER -->
@@ -38,12 +38,38 @@
 
     <!-- MAIN -->
     <main class="container main">
-      <h1>Biz bilan bog'laning</h1>
+      <div class="form-wrap">
+        <h2 class="form-wrap__title">Savollaringiz bormi?</h2>
 
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta,
-      repudiandae enim! Voluptatum incidunt, dolor, deleniti modi nobis corrupti
-      debitis quia accusantium quod inventore maiores animi ipsum quo, tempora
-      libero at?
+        <form class="form">
+          <div class="form-item">
+            <label for="name">Ismingiz</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              required
+              placeholder="Ismingizni kiriting"
+            />
+          </div>
+          <div class="form-item">
+            <label for="phone">Ismingiz</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              required
+              placeholder="+998"
+            />
+          </div>
+          <div class="form-item">
+            <label for="msg">Xabar</label>
+            <textarea required name="msg" id="msg" placeholder="Xabaringizni kiriting"></textarea>
+          </div>
+
+          <button class="form__submit">Yuborish</button>
+        </form>
+      </div>
     </main>
 
     <!-- FOOTER -->
@@ -102,5 +128,6 @@
 
     <!-- SCRIPT -->
     <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
   </body>
 </html>
