@@ -11,8 +11,8 @@
   <body>
     <!-- HEADER -->
     <header id="header" class="header">
-      <div class="container header__nav-wrapper">
-        <!-- navbar -->
+      <div class="container header-nav-wrapper">
+        <!-- left -->
         <nav class="nav">
           <a href="/" class="nav__logo">
             <img
@@ -23,8 +23,8 @@
           <ul id="nav-list" class="nav-list"></ul>
         </nav>
 
-        <!-- login -->
-        <div style="display: flex; align-items: center; gap: 1rem">
+        <!-- right -->
+        <div class="language">
           <a class="header__phone" href="tel:+998">
             <i class="fa-solid fa-phone-volume"></i>
             78 0000000
@@ -33,6 +33,16 @@
             <img src="../assets/img/uz.png" alt="flag" /> Uz
           </button>
         </div>
+        <span id="burger">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+      </div>
+
+      <div class="sidebar">
+        <span class="sidebar__hide-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </span>
+        <ul id="sidebarList" class="nav-list"></ul>
       </div>
     </header>
 
@@ -101,6 +111,6 @@
 
     <!-- SCRIPT -->
     <script src="../js/main.js"></script>
-    <script src="../js/vacancies.js"></script>
+    <script type="module" src="../js/vacancies.js"></script>
   </body>
 </html>

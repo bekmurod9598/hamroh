@@ -1,5 +1,7 @@
 "use strict";
 
+import { numberWithSpaces } from "../helpers/global.js";
+
 class Vacancy {
   constructor(title, weekDay, workTime, salary) {
     this.title = title;
@@ -46,7 +48,7 @@ arr.forEach((item) => {
     "Sotuv menejer",
     "monday-friday",
     "07:00-19:00",
-    "5000000-12000000"
+    `${numberWithSpaces(5000000)}-${numberWithSpaces(12000000)}`
   );
   fragment.append(el.render());
 });
