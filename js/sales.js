@@ -1,4 +1,5 @@
 "use strict";
+import { turncate } from "../helpers/global.js";
 class Sales {
   constructor(img, alt = "", validityPeriod, title, description, view) {
     this.img = img;
@@ -33,7 +34,7 @@ class Sales {
             ${this.title}
           </h3>
           <p class="sales-card__description">
-            ${this.description}
+            ${turncate(this.description, 74, "...")}
           </p>
         </div>
 
@@ -61,7 +62,7 @@ sales.forEach((item) => {
       to: "19.12.2024",
     },
     "Title",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "Do‘konlarimizdan 25% chegirma bilan OPPO smartfonlarini xarid qilib, zamon. qwerty",
     108 + item
   );
   fragment.append(el.render());

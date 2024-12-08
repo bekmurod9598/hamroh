@@ -7,16 +7,20 @@
   left: 0;
   width: 100%;
   z-index: 9999;
-  // header__nav-wrapper
-  &__nav-wrapper {
+  // header-nav-wrapper
+  &-nav-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 8px;
   }
   .nav {
     display: flex;
     align-items: center;
     gap: 2.5rem;
+    @media screen and (max-width:900px) {
+      gap: 1rem;
+    }
     // nav__logo
     &__logo {
       max-width: 160px;
@@ -30,16 +34,33 @@
       display: flex;
       align-items: center;
       gap: 22px;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
       // nav-list__item
       // nav-list__item-link
       &__item-link {
-        @include font(0.875rem, 400, 12px, $blue);
+        @include font(1rem, 300, 12px, $blue);
         transition: color 0.15s ease;
         &:hover,
         &.active {
           color: $yellow;
         }
       }
+    }
+  }
+  .language {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .hide-sidebar {
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: inline-block;
     }
   }
   // header__phone
@@ -53,25 +74,68 @@
   // header__lang
   &__lang {
     @include font(0.875rem, 400, 0.75rem, $dark);
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    background: none;
     cursor: pointer;
     transition: opacity 0.15s ease;
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-  &__lang {
-    border: none;
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    background: none;
-    padding: 0;
     img {
       width: 24px;
       height: 16px;
     }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  #burger {
+    display: none;
+    @media screen and (max-width: 768px) {
+      display: inline-block;
+    }
+  }
+}
+
+// SIDEBAR
+.header .sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999999999999999999;
+  width: 33%;
+  height: 100vh;
+  background: #000000dc;
+  backdrop-filter: blur(10px);
+  padding-top: 1rem;
+  transition: all 0.15s ease;
+  transform: translateX(100%);
+  &.active {
+    transform: translateX(0);
+  }
+  // sidebar__hide-btn
+  &__hide-btn {
+    color: $white;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+  }
+  .nav-list {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    // nav-list__item-link
+    &__item-link{
+      color: #ccc;
+      &.active{
+        color: $yellow;
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 425px) {
+    width: 100%;
   }
 }

@@ -66,20 +66,42 @@ class Category {
       <figure class="categories__card-img">
         <img loading="lazy" src="${this.img}" alt="${this.alt}" />
       </figure>
-      <h3 class="categories__card-title">${this.title}</h3>
-    `;
+      `;
+      // <h3 class="categories__card-title">${this.title}</h3>
     return element;
   }
 }
 
 let categoryFragment = new DocumentFragment();
-const categories = [1, 2, 3, 4, 5];
+const categories = [
+  {
+    img: "../assets/img/category/Smartfonlar.jpg",
+    title: "Smartfonlar",
+  },
+  {
+    img: "../assets/img/category/Televizorlar.jpg",
+    title: "Televizorlar",
+  },
+  {
+    img: "../assets/img/category/Mebellar.jpg",
+    title: "Mebellar",
+  },
+  {
+    img: "../assets/img/category/Maishiy-texnikalar.jpg",
+    title: "Maishiy texnikalar",
+  },
+  {
+    img: "../assets/img/category/Issitgichlar.jpg",
+    title: "Issitgichlar",
+  },
+  {
+    img: "../assets/img/category/Avto-jihozlar.jpg",
+    title: "Avto jihozlar",
+  },
+];
+
 categories.forEach((item) => {
-  const el = new Category(
-    "https://picsum.photos/900/500",
-    "alt",
-    "category title"
-  );
+  const el = new Category(item.img, item.title, item.title);
   categoryFragment.append(el.render());
 });
 
@@ -155,3 +177,53 @@ shortSales.forEach((item) => {
 });
 
 document.querySelector(".section .short-sales").append(shortSalesFragment);
+
+
+/** STORE BRANCHES */
+class StoreBranch {
+  constructor(name, address, workTime) {
+    this.name = name;
+    this.address = address;
+    this.workTime = workTime;
+  }
+
+  render() {
+    const element = document.createElement("div");
+    element.classList.add("store-branches__item");
+    element.innerHTML = `
+      <div style="display: flex; gap: 0.75rem; margin-bottom: 12px">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <h3 class="store-branches__item-title">${this.name}</h3>
+          <span class="store-branches__item-subtitle">
+            ${this.address}
+          </span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 0.75rem">
+        <i class="fa-regular fa-clock"></i>
+        <div>
+          <h3 class="store-branches__item-title">${this.workTime}</h3>
+          <span class="store-branches__item-subtitle">Ochiq</span>
+        </div>
+      </div>
+    `;
+    return element;
+  }
+}
+
+let storeBranchFragment = new DocumentFragment();
+
+const storeBranches = [1, 2, 3];
+storeBranches.forEach((item) => {
+  const el = new StoreBranch(
+    "Store name",
+    "Address. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "07:00-19:00"
+  );
+  storeBranchFragment.append(el.render());
+});
+
+document
+  .querySelector(".store-branches-wrapper .store-branches")
+  .append(storeBranchFragment);

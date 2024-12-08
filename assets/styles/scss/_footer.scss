@@ -6,6 +6,8 @@
 .footer .nav {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
   // nav__logo
   &__logo {
     max-width: 160px;

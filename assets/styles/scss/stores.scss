@@ -11,6 +11,14 @@
   display: flex;
   gap: 2rem;
   margin: 2rem 0 3rem;
+  @media screen and (max-width:768px) {
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem 0 2rem;
+    .store__img{
+      width: 100%;
+    }
+  }
   // store__img
   &__img {
     width: 575px;
@@ -40,6 +48,9 @@
   // store__title
   &__title {
     @include font(1.2rem, 500, 1.5rem, $dark);
+    @media screen and (max-width:425px) {
+      font-size: 1rem;
+    }
     // store__title_link
     &_link{
       color: #1487F9;

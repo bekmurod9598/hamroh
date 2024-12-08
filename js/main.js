@@ -39,12 +39,14 @@ if (currentPath.endsWith("index.html") || currentPath === "/") {
 // Create a navbar
 const headerNavbar = document.querySelector(".header #nav-list");
 const footerNavbar = document.querySelector(".footer #nav-list");
+const sidebarList = document.querySelector(".header #sidebarList");
 
 // Created fragment
 const headerFragment = new DocumentFragment();
 const footerFragment = new DocumentFragment();
+const siderbarFragment = new DocumentFragment();
 
-if (headerNavbar && footerNavbar) {
+if (headerNavbar && footerNavbar && sidebarList) {
   pages.forEach((page) => {
     const headerLi = document.createElement("li");
     const link = document.createElement("a");
@@ -65,8 +67,27 @@ if (headerNavbar && footerNavbar) {
     // Footer link (independent from header)
     const footerLi = headerLi.cloneNode(true); // Clone header link for footer
     footerFragment.append(footerLi);
+
+    const sidebarLi = headerLi.cloneNode(true);
+    siderbarFragment.append(sidebarLi);
   });
 }
 
 headerNavbar.append(headerFragment);
 footerNavbar.append(footerFragment);
+sidebarList.append(siderbarFragment);
+
+const sidebar = document.querySelector(".header .sidebar");
+const burgerBtn = document.querySelector("#burger");
+const hideBtn = document.querySelector(".sidebar .sidebar__hide-btn");
+
+burgerBtn.addEventListener("click", () => {
+  document.body.style.overflow = "hidden";
+  sidebar.classList.add("active");
+});
+
+hideBtn.addEventListener("click", () => {
+  document.body.style.overflow = "visible";
+  sidebar.classList.remove("active");
+});
+
