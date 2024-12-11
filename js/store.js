@@ -64,7 +64,7 @@ stores.forEach((item) => {
     "Store name",
     "Address. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     "07:00-19:00",
-    "+998 78 0000000",
+    "+998 (+998) 93 9812345",
     "#"
   );
   fragment.append(el.render());
