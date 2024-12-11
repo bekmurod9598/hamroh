@@ -2,7 +2,7 @@
 
 /** SLIDER */
 class Slider {
-  constructor(img, alt = "", parentSelector) {
+  constructor(img, alt = "") {
     this.img = img;
     this.alt = alt;
   }
@@ -11,7 +11,6 @@ class Slider {
     element.classList.add("swiper-slide"); // Slides
     element.innerHTML = `
       <img
-        style="width: 100%; object-fit: cover"
         src="${this.img}"
         alt="${this.alt}"
       />
@@ -21,13 +20,19 @@ class Slider {
 }
 
 let fragment = new DocumentFragment();
-const sliders = [1, 2, 3, 4, 5];
+const sliders = [
+  {
+    img: "../assets/img/slider/Fayzli-yakshanba-aksiyasi.jpg",
+    alt: "Fayzli-yakshanba-aksiyasi",
+  },
+  {
+    img: "../assets/img/slider/Fayzli-yakshanba-aksiyasi.jpg",
+    alt: "Fayzli-yakshanba-aksiyasi",
+  },
+];
+
 sliders.forEach((item) => {
-  const el = new Slider(
-    `https://picsum.photos/id/${1 + item}/1200/900`,
-    "sasa",
-    ".swiper .swiper-wrapper"
-  );
+  const el = new Slider(item.img, item.alt);
   fragment.append(el.render());
 });
 document.querySelector(".swiper-wrapper").append(fragment);
@@ -67,7 +72,7 @@ class Category {
         <img loading="lazy" src="${this.img}" alt="${this.alt}" />
       </figure>
       `;
-      // <h3 class="categories__card-title">${this.title}</h3>
+    // <h3 class="categories__card-title">${this.title}</h3>
     return element;
   }
 }
@@ -177,7 +182,6 @@ shortSales.forEach((item) => {
 });
 
 document.querySelector(".section .short-sales").append(shortSalesFragment);
-
 
 /** STORE BRANCHES */
 class StoreBranch {
