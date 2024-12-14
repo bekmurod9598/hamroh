@@ -47,7 +47,7 @@
     &__submit {
       @include font(1.2rem, 500, 1rem, $white);
       padding: 1rem;
-      background: $blue;
+      background: $light-blue;
       border-radius: 8px;
       cursor: pointer;
       transition: opacity 0.15s ease;

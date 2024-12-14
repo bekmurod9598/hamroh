@@ -1,5 +1,6 @@
 .footer {
-  background: #f3f4f6;
+  // background: #f3f4f6;
+  background: $blue;
   padding: 3.25rem 0;
 }
 
@@ -25,8 +26,9 @@
     a {
       @include font(1.25rem, 400, 0.75rem, $yellow);
       transition: opacity .15s ease;
+      opacity: .7;
       &:hover{
-        opacity: .7;
+        opacity: 1;
       }
     }
   }
@@ -38,7 +40,7 @@
     }
     // nav-list__item-link
     &-link {
-      @include font(1rem, 400, 0.75rem, $light-dark);
+      @include font(1rem, 400, 0.75rem, $white);
       transition: color 0.15s ease;
       &:hover,
       &.active {

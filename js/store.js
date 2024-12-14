@@ -41,7 +41,7 @@ class Store {
           <!-- phone -->
           <div class="store__info">
             <i class="fa-solid fa-phone-volume"></i>
-            <h3 class="store__title">${this.phone}</h3>
+            <a href="tel:${this.phone}" class="store__title">${this.phone}</a>
           </div>
           <!-- map -->
           <div class="store__info">
@@ -63,8 +63,8 @@ stores.forEach((item) => {
     "https://picsum.photos/900/650",
     "Store name",
     "Address. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    "07:00-19:00",
-    "+998 (+998) 93 9812345",
+    "08:30-17:00",
+    "+998558014444",
     "#"
   );
   fragment.append(el.render());

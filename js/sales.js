@@ -52,10 +52,20 @@ class Sales {
 
 let fragment = new DocumentFragment();
 
-const sales = [1, 2, 3, 4, 5, 6];
-sales.forEach((item) => {
+const sales = [
+  {
+    img: "../assets/img/sales/phone.jpg",
+  },
+  {
+    img: "../assets/img/sales/tools.jpg",
+  },
+  {
+    img: "../assets/img/sales/washing-machine.jpg",
+  },
+];
+sales.forEach((item, index) => {
   const el = new Sales(
-    `https://picsum.photos/id/${452 + item}/900/800`,
+    item.img,
     "image alt",
     {
       from: "20.11.2024",
@@ -63,7 +73,7 @@ sales.forEach((item) => {
     },
     "Title",
     "Do‘konlarimizdan 25% chegirma bilan OPPO smartfonlarini xarid qilib, zamon. qwerty",
-    108 + item
+    108 + index
   );
   fragment.append(el.render());
 });

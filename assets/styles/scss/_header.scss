@@ -1,5 +1,5 @@
 .header {
-  padding: 0.75rem 0;
+  padding: 1rem 0;
   background: #fffc;
   backdrop-filter: blur(24px);
   position: fixed;
@@ -18,16 +18,13 @@
     display: flex;
     align-items: center;
     gap: 2.5rem;
-    @media screen and (max-width:900px) {
+    @media screen and (max-width: 900px) {
       gap: 1rem;
     }
     // nav__logo
     &__logo {
-      max-width: 160px;
       display: block;
-      img {
-        width: 100%;
-      }
+      line-height: 0;
     }
     // nav-list
     &-list {
@@ -125,9 +122,9 @@
     align-items: flex-start;
     gap: 1.5rem;
     // nav-list__item-link
-    &__item-link{
+    &__item-link {
       color: #ccc;
-      &.active{
+      &.active {
         color: $yellow;
       }
     }

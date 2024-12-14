@@ -256,6 +256,13 @@
       // store-branches__item-title
       &-title {
         @include font(1.2rem, 600, 1.2rem, $dark);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4px;
+        span {
+          @include font(0.7rem, 400, 1.2rem, $light-dark);
+        }
       }
       // store-branches__item-subtitle
       &-subtitle {

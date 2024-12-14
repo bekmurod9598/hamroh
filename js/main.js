@@ -90,4 +90,3 @@ hideBtn.addEventListener("click", () => {
   document.body.style.overflow = "visible";
   sidebar.classList.remove("active");
 });
-
