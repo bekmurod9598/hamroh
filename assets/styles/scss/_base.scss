@@ -6,15 +6,14 @@
 
 @font-face {
   font-family: Gilory;
-  src: 
-    // url("../../fonts/Gilroy-Bold.ttf") format("truetype"),
+  src: url("../../fonts/Gilroy-Medium.eot") format("eot"),
     url("../../fonts/Gilroy-Medium.ttf") format("truetype"),
-    // url("../../fonts/Gilroy-Bold.woff") format("woff"),
     url("../../fonts/Gilroy-Medium.woff") format("woff"),
-    // url("../../fonts/Gilroy-Bold.woff2") format("woff2"),
-    url("../../fonts/Gilroy-Medium.woff2") format("woff2"),
-    // url("../../fonts/Gilroy-Bold.eot") format("eot"),
-    url("../../fonts/Gilroy-Medium.eot") format("eot");
+    url("../../fonts/Gilroy-Medium.woff2") format("woff2");
+  // url("../../fonts/Gilroy-Bold.ttf") format("truetype"),
+  // url("../../fonts/Gilroy-Bold.woff") format("woff"),
+  // url("../../fonts/Gilroy-Bold.woff2") format("woff2"),
+  // url("../../fonts/Gilroy-Bold.eot") format("eot"),
 }
 
 body {
@@ -54,7 +53,7 @@ a {
 
   @media screen and (max-width: 640px) {
     max-width: 100%;
-    padding: 0 .8rem;
+    padding: 0 0.8rem;
   }
 }
 
