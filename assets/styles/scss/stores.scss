@@ -4,66 +4,129 @@
 @import "header";
 @import "footer";
 
-.main .store {
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  display: flex;
-  gap: 2rem;
-  margin: 2rem 0 3rem;
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    padding: 1rem;
-    margin: 1rem 0 2rem;
-    .store__img {
-      width: 100%;
-    }
-  }
-  // store__img
-  &__img {
-    width: 575px;
-    height: 330px;
-    border-radius: 8px;
-    overflow: hidden;
-    background: #eee;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  // store__info
-  &__info {
+.main {
+  .form {
     display: flex;
-    gap: 1rem;
-    &:not(:last-child) {
-      margin-bottom: 1.5rem;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    // form-input
+    &-input {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      label {
+        @include font(1.2rem, 600, 1.5rem, $blue);
+      }
+      select {
+        @include font(1rem, 600, 1rem, $dark);
+        width: 280px;
+        padding: .8rem 1rem;
+        border: 1px solid $light-dark;
+        border-radius: 8px;
+      }
     }
-    i {
-      font-size: 1.25rem;
-      color: $yellow;
-      line-height: 1.5rem;
-    }
-    &:nth-child(3) a {
-      transition: color .15s ease;
-      &:hover{
-        color: $light-blue
+    button {
+      @include font(1rem, 600, 1rem, $white);
+      width: 120px;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid $light-blue;
+      background: $light-blue;
+      cursor: pointer;
+      transition: opacity 0.15s ease;
+      align-self: flex-end;
+      &:hover {
+        opacity: 0.7;
       }
     }
   }
-  // store__title
-  &__title {
-    @include font(1.2rem, 500, 1.5rem, $dark);
-    @media screen and (max-width: 425px) {
-      font-size: 1rem;
+  .store {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0 3rem;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      padding: 1rem;
+      margin: 1rem 0 2rem;
+      .store__img {
+        width: 100%;
+      }
     }
-    // store__title_link
-    &_link {
-      color: $light-blue;
-      text-decoration: underline;
+    // store__img
+    &__img {
+      width: 575px;
+      height: 330px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #eee;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    // store__info
+    &__info {
+      display: flex;
+      gap: 1rem;
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+      i {
+        font-size: 1.25rem;
+        color: $yellow;
+        line-height: 1.5rem;
+      }
+      &:nth-child(3) a {
+        transition: color 0.15s ease;
+        &:hover {
+          color: $light-blue;
+        }
+      }
+    }
+    // store__title
+    &__title {
+      @include font(1.2rem, 500, 1.5rem, $dark);
+      @media screen and (max-width: 425px) {
+        font-size: 1rem;
+      }
+      // store__title_link
+      &_link {
+        color: $light-blue;
+        text-decoration: underline;
+      }
     }
   }
-  // store__
-  // store__
-  // store__
+}
+
+#pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.6rem;
+  margin-bottom: 3rem;
+  button {
+    color: $blue;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    &:hover {
+      background-color: $light-blue;
+      color: $white;
+    }
+    &.active {
+      background-color: $blue;
+      color: $white;
+      font-weight: bold;
+    }
+    &:disabled {
+      background-color: lightgray;
+      cursor: not-allowed;
+    }
+  }
 }

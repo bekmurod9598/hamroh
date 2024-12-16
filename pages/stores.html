@@ -50,7 +50,26 @@
     <main class="container main">
       <h1 class="main__title">Do'konlarimiz</h1>
 
+      <form class="form">
+        <div class="form-input">
+          <!-- <label for="area">Hudud</label> -->
+          <select name="area" id="area">
+            <option value="0" selected>Hudud</option>
+          </select>
+        </div>
+        <div class="form-input">
+          <!-- <label for="city">Shaxar</label> -->
+          <select name="city" id="city">
+            <option value="0" selected>Shaxar</option>
+          </select>
+        </div>
+        <button id="submit">Izlash</button>
+      </form>
+
       <div class="stores-wrapper"></div>
+
+      <!-- pagination -->
+      <div id="pagination-controls"></div>
     </main>
 
     <!-- FOOTER -->
@@ -109,6 +128,6 @@
 
     <!-- SCRIPT -->
     <script src="../js/main.js"></script>
-    <script src="../js/store.js"></script>
+    <script type="module" src="../js/store.js"></script>
   </body>
 </html>
