@@ -199,12 +199,12 @@ document.querySelector(".section .short-sales").append(shortSalesFragment);
 const regions = [
   {
     id: 1,
-    name: "Фарғона",
+    name: "Farg‘ona",
     branches: [
       {
         id: 11,
-        name: "Қўқон",
-        address: "Қўқон шахар, Туркистон кўчаси 130-уй",
+        name: "Qo‘qon",
+        address: "Qo‘qon shaxar, Turkiston ko‘chasi 130-uy",
         location:
           "https://maps.google.com/maps?q=40.532350,70.942634&ll=40.532350,70.942634&z=16",
         workTime: {
@@ -215,8 +215,8 @@ const regions = [
       },
       {
         id: 12,
-        name: "Марғилон",
-        address: "Марғилон шахар Б.Марғилоний кўчаси 107-уй",
+        name: "Marg‘ilon",
+        address: "Marg‘ilon shaxar, B.Marg‘iloniy ko‘chasi 107-uy",
         location:
           "https://maps.google.com/maps?q=40.477006,71.723744&ll=40.477006,71.723744&z=16",
         workTime: {
@@ -227,8 +227,8 @@ const regions = [
       },
       {
         id: 13,
-        name: "Олтиариқ",
-        address: "Олтиариқ тумани Амир Темур кўчаси 18-уй",
+        name: "Oltiariq",
+        address: "Oltiariq tumani, Amir Temur ko‘chasi 18-uy",
         location:
           "https://maps.google.com/maps?q=40.393350,71.482817&ll=40.393350,71.482817&z=16",
         workTime: {
@@ -239,8 +239,8 @@ const regions = [
       },
       {
         id: 14,
-        name: "Қўштепа",
-        address: "Қўштепа тумани Намуна кўчаси 2 уй",
+        name: "Qo‘shtepa",
+        address: "Qo‘shtepa tumani, Namuna ko‘chasi 2-uy",
         location:
           "https://maps.google.com/maps?q=40.454531,71.661507&ll=40.454531,71.661507&z=16",
         workTime: {
@@ -253,12 +253,12 @@ const regions = [
   },
   {
     id: 2,
-    name: "Тошкент",
+    name: "Toshkent",
     branches: [
       {
         id: 21,
-        name: "Олмалиқ",
-        address: "Олмалик шахар Амир Тимур кўчаси 31-А дом",
+        name: "Olmaliq",
+        address: "Olmaliq shaxar, Amir Timur ko‘chasi 31-A dom",
         location:
           "https://maps.google.com/maps?q=40.849288,69.601751&ll=40.849288,69.601751&z=16",
         workTime: {
@@ -269,8 +269,8 @@ const regions = [
       },
       {
         id: 22,
-        name: "Янгийўл",
-        address: "Янгийўл шахар О.Кучкоров кўчаси 2-уй",
+        name: "Yangiyo‘l",
+        address: "Yangiyo‘l shaxar, O.Kuchkorov ko‘chasi 2-uy",
         location:
           "https://maps.google.com/maps?q=41.109726,69.065083&ll=41.109726,69.065083&z=16",
         workTime: {
@@ -281,8 +281,8 @@ const regions = [
       },
       {
         id: 23,
-        name: "Паркент",
-        address: "Паркент тумани Алишер Навоий шох кўчаси 37-уй",
+        name: "Parkent",
+        address: "Parkent tumani, Alisher Navoiy shox ko‘chasi 37-uy",
         location:
           "https://maps.google.com/maps?q=41.293496,69.681131&ll=41.293496,69.681131&z=16",
         workTime: {
@@ -295,12 +295,12 @@ const regions = [
   },
   {
     id: 3,
-    name: "Самарқанд",
+    name: "Samarqand",
     branches: [
       {
         id: 31,
-        name: "Ургут",
-        address: "Ургут тумани Навоийшох кўчаси 144-уй",
+        name: "Urgut",
+        address: "Urgut tumani, Navoiyshox ko‘chasi 144-uy",
         location:
           "https://maps.google.com/maps?q=39.407948,67.244049&ll=39.407948,67.244049&z=16",
         workTime: {
@@ -311,8 +311,8 @@ const regions = [
       },
       {
         id: 32,
-        name: "Каттақўрғон",
-        address: "Каттақўрғон тумани Мустақиллик кўчаси 36-уй",
+        name: "Kattaqo‘rg‘on",
+        address: "Kattaqo‘rg‘on tumani, Mustaqillik ko‘chasi 36-uy",
         location:
           "https://maps.google.com/maps?q=39.990464,66.234813&ll=39.990464,66.234813&z=16",
         workTime: {
@@ -323,8 +323,8 @@ const regions = [
       },
       {
         id: 33,
-        name: "Челак",
-        address: "Челак шахри Тошкент кўчаси 1-уй",
+        name: "Chelak",
+        address: "Chelak shaxri, Toshkent ko‘chasi 1-uy",
         location:
           "https://maps.google.com/maps?q=39.920341,66.859491&ll=39.920341,66.859491&z=16",
         workTime: {
@@ -335,8 +335,8 @@ const regions = [
       },
       {
         id: 34,
-        name: "Булунғур",
-        address: "Булунғур шахарчаси Ўзбекистон кўчаси 4-уй",
+        name: "Bulung‘ur",
+        address: "Bulung‘ur shaxarchasi, O‘zbekiston ko‘chasi 4-uy",
         location:
           "https://maps.google.com/maps?q=39.761698,67.277815&ll=39.761698,67.277815&z=16",
         workTime: {
@@ -347,8 +347,9 @@ const regions = [
       },
       {
         id: 35,
-        name: "Пахтачи",
-        address: "Пахтачи тумани Зиёвуддин шахарчаси Амир Темур кўчаси 25-уй",
+        name: "Paxtachi",
+        address:
+          "Paxtachi tumani, Ziyovuddin shaxarchasi Amir Temur ko‘chasi 25-uy",
         location:
           "https://maps.google.com/maps?q=40.032153,65.662805&ll=40.032153,65.662805&z=16",
         workTime: {
@@ -361,12 +362,12 @@ const regions = [
   },
   {
     id: 4,
-    name: "Наманган",
+    name: "Namangan",
     branches: [
       {
         id: 41,
-        name: "Наманган",
-        address: "Наманган шахар Бобуршох кўчаси 21-уй",
+        name: "Namangan",
+        address: "Namangan shaxar Boburshox ko‘chasi 21-uy",
         location:
           "https://maps.google.com/maps?q=40.974978,71.718943&ll=40.974978,71.718943&z=16",
         workTime: {
@@ -379,12 +380,12 @@ const regions = [
   },
   {
     id: 5,
-    name: "Бухоро",
+    name: "Buxoro",
     branches: [
       {
         id: 51,
-        name: "Ғиждувон",
-        address: "Ғиждивон тумани Юсуф Хамадоний кўчаси 190-уй",
+        name: "G‘ijdivon",
+        address: "G‘ijdivon tumani Yusuf Xamadoniy ko‘chasi 190-uy",
         location:
           "https://maps.google.com/maps?q=40.093193,64.670273&ll=40.093193,64.670273&z=16",
         workTime: {
@@ -397,12 +398,12 @@ const regions = [
   },
   {
     id: 6,
-    name: "Сурхондарё",
+    name: "Surxondaryo",
     branches: [
       {
         id: 61,
-        name: "Денов",
-        address: "Денов шахар Шароф рашидов кўсачи 182/4-уй",
+        name: "Denov",
+        address: "Denov shaxar, Sharof rashidov ko‘sachi 182/4-uy",
         location:
           "https://maps.google.com/maps?q=38.278949,67.895979&ll=38.278949,67.895979&z=16",
         workTime: {
@@ -413,8 +414,8 @@ const regions = [
       },
       {
         id: 62,
-        name: "Шўрчи",
-        address: "Шўрчи тумани Мустақиллик кўчаси 129-уй",
+        name: "Sho‘rchi",
+        address: "Sho‘rchi tumani, Mustaqillik ko‘chasi 129-uy",
         location:
           "https://maps.google.com/maps?q=37.998944,67.790933&ll=37.998944,67.790933&z=16",
         workTime: {
@@ -427,12 +428,12 @@ const regions = [
   },
   {
     id: 7,
-    name: "Қашқадарё",
+    name: "Qashqadaryo",
     branches: [
       {
         id: 71,
-        name: "Чироқчи",
-        address: "Чироқчи тумани Мустақиллик кўчаси 5-уй",
+        name: "Chiroqchi",
+        address: "Chiroqchi tumani, Mustaqillik ko‘chasi 5-uy",
         location:
           "https://maps.google.com/maps?q=39.032131,66.570291&ll=39.032131,66.570291&z=16",
         workTime: {
@@ -443,8 +444,8 @@ const regions = [
       },
       {
         id: 72,
-        name: "Косон",
-        address: "Косон тумани Мустақиллик шох кўчаси",
+        name: "Koson",
+        address: "Koson tumani, Mustaqillik shox ko‘chasi",
         location:
           "https://maps.google.com/maps?q=39.041247,65.585832&ll=39.041247,65.585832&z=16",
         workTime: {
@@ -455,8 +456,8 @@ const regions = [
       },
       {
         id: 73,
-        name: "Шахрисабз",
-        address: "Шахрисабз шахар Ипак йўли кўчаси",
+        name: "Shaxrisabz",
+        address: "Shaxrisabz shaxar, Ipak yo‘li ko‘chasi",
         location:
           "https://maps.google.com/maps?q=39.069228,66.835206&ll=39.069228,66.835206&z=16",
         workTime: {
@@ -469,12 +470,12 @@ const regions = [
   },
   {
     id: 8,
-    name: "Навоий",
+    name: "Navoiy",
     branches: [
       {
         id: 81,
-        name: "Хатирчи",
-        address: "Хатирчи туман мустақиллик кўчаси 78-уй",
+        name: "Xatirchi",
+        address: "Xatirchi tuman mustaqillik ko‘chasi 78-uy",
         location:
           "https://maps.google.com/maps?q=40.030902,65.964341&ll=40.030902,65.964341&z=16",
         workTime: {
@@ -487,12 +488,12 @@ const regions = [
   },
   {
     id: 9,
-    name: "Хоразм",
+    name: "Xorazm",
     branches: [
       {
         id: 91,
-        name: "Хазорасп",
-        address: "Хазорасп тумани А.Навоий кўчаси 110-уй",
+        name: "Xazorasp",
+        address: "Xazorasp tumani A.Navoiy ko‘chasi 110-uy",
         location:
           "https://maps.google.com/maps?q=41.310854,61.092979&ll=41.310854,61.092979&z=16",
         workTime: {
@@ -516,7 +517,6 @@ document.querySelector(".store-branches .select-input").append(regionFragment);
 
 // branches card
 let currentRegion = 1;
-let query = "";
 const search = document.querySelector(".store-branches__search-input");
 let storeBranches = regions.filter((item) => item.id === 1)[0].branches;
 
@@ -575,5 +575,29 @@ selectInput.addEventListener("change", (e) => {
   currentRegion = +e.target.value;
   storeBranches = regions.filter((item) => item.id == currentRegion)[0]
     .branches;
+  originalStoreBranches = [...storeBranches];
   renderBranches(storeBranches);
+});
+
+// search filter
+let originalStoreBranches = [...storeBranches];
+let query = "";
+const searchInput = document.querySelector(
+  ".store-branches .store-branches__search-input"
+);
+
+searchInput.addEventListener("input", (e) => {
+  query = e.target.value;
+
+  // Inputni tozalaganda asl massivni qayta tiklash
+  if (query.trim() === "") {
+    renderBranches(originalStoreBranches); // Asl massivni render qilish
+    return;
+  }
+
+  // Filtrlash
+  let filteredBranches = originalStoreBranches.filter((item) =>
+    item.name.toLocaleLowerCase().includes(query.toLocaleLowerCase())
+  );
+  renderBranches(filteredBranches);
 });
