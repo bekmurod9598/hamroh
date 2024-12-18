@@ -168,13 +168,13 @@ let shortSalesFragment = new DocumentFragment();
 
 const shortSales = [
   {
+    img: "../assets/img/sales/chegirma.jpg",
+  },
+  {
     img: "../assets/img/sales/phone.jpg",
   },
   {
     img: "../assets/img/sales/tools.jpg",
-  },
-  {
-    img: "../assets/img/sales/washing-machine.jpg",
   },
 ];
 shortSales.forEach((item, index) => {

@@ -60,7 +60,7 @@ const sales = [
     img: "../assets/img/sales/tools.jpg",
   },
   {
-    img: "../assets/img/sales/washing-machine.jpg",
+    img: "../assets/img/sales/chegirma.jpg",
   },
 ];
 sales.forEach((item, index) => {
