@@ -50,8 +50,6 @@ class Sales {
   }
 }
 
-let fragment = new DocumentFragment();
-
 const sales = [
   {
     img: "../assets/img/sales/phone.jpg",
@@ -63,19 +61,32 @@ const sales = [
     img: "../assets/img/sales/chegirma.jpg",
   },
 ];
-sales.forEach((item, index) => {
-  const el = new Sales(
-    item.img,
-    "image alt",
-    {
-      from: "20.11.2024",
-      to: "19.12.2024",
-    },
-    "Title",
-    "Do‘konlarimizdan 25% chegirma bilan OPPO smartfonlarini xarid qilib, zamon. qwerty",
-    108 + index
-  );
-  fragment.append(el.render());
-});
 
-document.querySelector("#sales .sales-wrapper").append(fragment);
+function renderSales(params) {
+  let fragment = new DocumentFragment();
+  params.forEach((item, index) => {
+    const el = new Sales(
+      item.img,
+      "image alt",
+      {
+        from: "20.11.2024",
+        to: "19.12.2024",
+      },
+      "Title",
+      "Do‘konlarimizdan 25% chegirma bilan OPPO smartfonlarini xarid qilib, zamon. qwerty",
+      108 + index
+    );
+    fragment.append(el.render());
+  });
+  const container = document.querySelector("#sales .sales-wrapper");
+  container.innerHTML = "";
+  container.append(fragment);
+}
+renderSales(sales);
+// LOAD MORE
+const loadMore = document.querySelector("#sales #load-more");
+
+loadMore.addEventListener("click", () => {
+  sales.push(...sales.slice(0, 3));
+  renderSales(sales);
+});

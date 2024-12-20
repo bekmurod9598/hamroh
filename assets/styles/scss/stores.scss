@@ -28,7 +28,7 @@
     }
     button {
       @include font(1rem, 600, 1rem, $white);
-      width: 120px;
+      min-width: 120px;
       padding: 1rem;
       border-radius: 8px;
       border: 1px solid $light-blue;
@@ -38,6 +38,11 @@
       align-self: flex-end;
       &:hover {
         opacity: 0.7;
+      }
+      &:last-child{
+        background: #ddd;
+        border-color: #ddd;
+        color: $dark;
       }
     }
   }

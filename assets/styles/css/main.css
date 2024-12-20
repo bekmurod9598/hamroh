@@ -11,7 +11,7 @@
 body {
   font-family: "Gilory", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -501,7 +501,7 @@ a {
   width: 100%;
   aspect-ratio: 3/2;
   overflow: hidden;
-  background: #99e4ad;
+  background: #ddd;
   border-radius: 8px;
 }
 .categories__card-img img {
@@ -675,7 +675,7 @@ a {
 }
 .store-addresses .store-branches__item {
   padding: 12px;
-  background: #ccf2d6;
+  background: rgba(170, 204, 243, 0.7529411765);
   cursor: pointer;
   transition: background 0.15s ease;
   border-radius: 8px;
@@ -683,7 +683,7 @@ a {
 }
 .store-addresses .store-branches__item:hover, .store-addresses .store-branches__item.active {
   background: #fff;
-  border-color: #a6e6b7;
+  border-color: #93c5fd;
 }
 .store-addresses .store-branches__item i {
   font-size: 1.5rem;

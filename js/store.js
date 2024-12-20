@@ -18,20 +18,14 @@ class Store {
         <figure class="store__img">
           <img src="${this.img}" alt="${this.name}" />
         </figure>
-
-        <!-- info block -->
         <div>
-          <!-- address -->
           <div class="store__info">
             <i class="fa-solid fa-location-dot"></i>
             <div>
-              <!-- store name -->
               <h3 class="store__title">${this.name}</h3>
-              <!-- store address -->
               <h3 class="store__title">${this.address}</h3>
             </div>
           </div>
-          <!-- work time -->
           <div class="store__info">
             <i class="fa-regular fa-clock"></i>
             <div>
@@ -39,12 +33,10 @@ class Store {
               <span class="store__status">Ochiq</span>
             </div>
           </div>
-          <!-- phone -->
           <div class="store__info">
             <i class="fa-solid fa-phone-volume"></i>
             <a href="tel:${this.phone}" class="store__title">${this.phone}</a>
           </div>
-          <!-- location -->
           <div class="store__info">
             <i class="fa-solid fa-route"></i>
             <a href="${this.location}" target="_blank" class="store__title store__title_link">Yoʻnalishlar uchun xaritaga qarang</a>
@@ -57,61 +49,135 @@ class Store {
 }
 
 const { regions } = parametrs;
-const stores = [];
+let stores = [];
 
 /** FILTER FORM */
 const area = document.querySelector(".form #area");
 const city = document.querySelector(".form #city");
 const submit = document.querySelector(".form #submit");
-const areaFragmet = new DocumentFragment();
-const cityFragmet = new DocumentFragment();
+const clearBtn = document.querySelector(".form #clear-btn"); // Clear button
 
-regions.forEach((item) => {
+// Fill area select options
+regions.forEach(item => {
   stores.push(...item.branches);
   const option = document.createElement("option");
   option.value = item.id;
   option.innerText = item.name;
-  areaFragmet.append(option);
+  area.appendChild(option);
 });
-area.append(areaFragmet);
 
-stores.forEach((item) => {
-  const option = document.createElement("option");
-  option.value = item.id;
-  option.innerText = item.name;
-  cityFragmet.append(option);
-});
-city.append(cityFragmet);
+// Fill city select options (Initially all cities)
+function fillCityOptions() {
+  // Clear previous city options
+  city.innerHTML = "<option value='0'>Shaharni tanlang</option>";
 
-area.addEventListener("change", (e) => {
-  console.log(e.target.value);
+  stores.forEach(item => {
+    const option = document.createElement("option");
+    option.value = item.id;
+    option.innerText = item.name;
+    city.appendChild(option);
+  });
+}
+
+// Function to update city options based on selected area
+function updateCityOptions(areaId) {
+  // Clear existing city options
+  city.innerHTML = "<option value='0'>Shaharni tanlang</option>";
+
+  // If area is selected, filter cities by that area
+  if (areaId !== "0" && areaId !== "") {
+    const selectedRegion = regions.find(region => region.id === parseInt(areaId));
+    if (selectedRegion) {
+      selectedRegion.branches.forEach(branch => {
+        const option = document.createElement("option");
+        option.value = branch.id;
+        option.innerText = branch.name;
+        city.appendChild(option);
+      });
+    }
+  } else {
+    // If no area is selected, show all cities
+    fillCityOptions();
+  }
+}
+
+// State object to hold temporary filter values
+const filterState = { areaId: "", cityId: "" };
+
+// Filter stores based on selected area and city
+function filterStores(areaId, cityId) {
+  return parametrs.regions.reduce((filteredStores, region) => {
+    if (areaId && areaId !== "0" && region.id !== parseInt(areaId)) return filteredStores;
+
+    const filteredBranches = region.branches.filter(branch => {
+      return !cityId || cityId === "0" || branch.id === parseInt(cityId);
+    });
+
+    return [...filteredStores, ...filteredBranches];
+  }, []);
+}
+
+// Apply filters and update view
+function applyFilters() {
+  const filteredStores = filterStores(filterState.areaId, filterState.cityId);
+  currentPage = 1;
+  renderPaginationControls(filteredStores.length, itemsPerPage);
+  renderData(paginate(filteredStores, currentPage, itemsPerPage));
+}
+
+// Event listeners for select inputs to update state
+area.addEventListener("change", e => {
+  filterState.areaId = e.target.value;
+  updateCityOptions(filterState.areaId); // Update city options based on selected area
+  // applyFilters();
 });
-city.addEventListener("change", (e) => {
-  console.log(e.target.value);
+
+city.addEventListener("change", e => {
+  filterState.cityId = e.target.value;
+  // applyFilters();
 });
-submit.addEventListener("click", (e) => {
+
+submit.addEventListener("click", e => {
   e.preventDefault();
-  console.log("submit");
+  applyFilters();
+});
+
+// Clear button event listener to reset the filters
+clearBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  
+  // Reset select inputs
+  area.value = "0";
+  city.value = "0";
+  
+  // Reset filterState
+  filterState.areaId = "";
+  filterState.cityId = "";
+  
+  // Fill city options again if no area is selected
+  fillCityOptions();
+  
+  // Apply filters with empty values
+  applyFilters();
 });
 
 /** PAGINATION */
-// Pagination variables
 let currentPage = 1;
 const itemsPerPage = 10;
 
-// Function to calculate and display items for the current page
 function paginate(array, page, itemsPerPage) {
   const startIndex = (page - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   return array.slice(startIndex, endIndex);
 }
-let fragment = new DocumentFragment();
-// Render the paginated data
+
 function renderData(items) {
   const container = document.querySelector(".main .stores-wrapper");
-  container.innerHTML = ""; // Clear previous data
-  items.forEach((item) => {
-    const el = new Store(
+  container.innerHTML = items.length ? "" : "<p>Hech qanday ma’lumot topilmadi!</p>";
+
+  const fragment = new DocumentFragment();
+  items.forEach(item => {
+    const store = new Store(
       "../assets/img/stores/hamroh.webp",
       item.name,
       item.address,
@@ -119,32 +185,27 @@ function renderData(items) {
       "+998558014444",
       item.location
     );
-    fragment.append(el.render());
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    fragment.append(store.render());
   });
 
   container.append(fragment);
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// Create pagination controls
 function renderPaginationControls(totalItems, itemsPerPage) {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
   const paginationContainer = document.getElementById("pagination-controls");
-  paginationContainer.innerHTML = ""; // Clear previous controls
+  paginationContainer.innerHTML = "";
 
-  // Create previous button
   const prevButton = document.createElement("button");
   prevButton.textContent = "Previous";
   prevButton.disabled = currentPage === 1;
   prevButton.addEventListener("click", () => {
-    if (currentPage > 1) {
-      currentPage--;
-      updatePagination();
-    }
+    if (currentPage > 1) currentPage--;
+    updatePagination();
   });
   paginationContainer.appendChild(prevButton);
 
-  // Create page number buttons
   for (let i = 1; i <= totalPages; i++) {
     const button = document.createElement("button");
     button.textContent = i;
@@ -156,27 +217,27 @@ function renderPaginationControls(totalItems, itemsPerPage) {
     paginationContainer.appendChild(button);
   }
 
-  // Create next button
   const nextButton = document.createElement("button");
   nextButton.textContent = "Next";
   nextButton.disabled = currentPage === totalPages;
   nextButton.addEventListener("click", () => {
-    if (currentPage < totalPages) {
-      currentPage++;
-      updatePagination();
-    }
+    if (currentPage < totalPages) currentPage++;
+    updatePagination();
   });
   paginationContainer.appendChild(nextButton);
 }
 
-// Update pagination view
 function updatePagination() {
-  const paginatedItems = paginate(stores, currentPage, itemsPerPage);
+  const filteredStores = filterStores(filterState.areaId, filterState.cityId);
+  const paginatedItems = paginate(filteredStores, currentPage, itemsPerPage);
   renderData(paginatedItems);
-  renderPaginationControls(stores.length, itemsPerPage);
+  renderPaginationControls(filteredStores.length, itemsPerPage);
 }
 
 // Initialize
 document.addEventListener("DOMContentLoaded", () => {
-  updatePagination();
+  filterState.areaId = area.value || "0";
+  filterState.cityId = city.value || "0";
+  fillCityOptions(); // Initially fill all city options
+  applyFilters();
 });

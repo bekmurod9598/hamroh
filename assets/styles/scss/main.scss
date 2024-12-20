@@ -84,7 +84,7 @@
       width: 100%;
       aspect-ratio: 3 / 2;
       overflow: hidden;
-      background: #99e4ad;
+      background: #ddd;
       border-radius: 8px;
       img {
         width: 100%;
@@ -239,7 +239,7 @@
     // store-branches__item
     &__item {
       padding: 12px;
-      background: #ccf2d6;
+      background: #aaccf3c0;
       cursor: pointer;
       transition: background 0.15s ease;
       border-radius: 8px;
@@ -247,7 +247,7 @@
       &:hover,
       &.active {
         background: $white;
-        border-color: #a6e6b7;
+        border-color: #93c5fd;
       }
       i {
         font-size: 1.5rem;

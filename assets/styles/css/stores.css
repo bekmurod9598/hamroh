@@ -11,7 +11,7 @@
 body {
   font-family: "Gilory", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 
@@ -368,7 +368,7 @@ a {
   font-weight: 600;
   line-height: 1rem;
   color: #fff;
-  width: 120px;
+  min-width: 120px;
   padding: 1rem;
   border-radius: 8px;
   border: 1px solid #016bd9;
@@ -379,6 +379,11 @@ a {
 }
 .main .form button:hover {
   opacity: 0.7;
+}
+.main .form button:last-child {
+  background: #ddd;
+  border-color: #ddd;
+  color: #111827;
 }
 .main .store {
   padding: 1rem 2rem;
