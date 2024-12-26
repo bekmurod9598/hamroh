@@ -3,6 +3,7 @@
 @import "base";
 @import "header";
 @import "sale-card";
+@import "vacancy";
 @import "footer";
 
 .swiper {
@@ -40,6 +41,7 @@
     width: 32px !important;
     height: 32px !important;
   }
+
   &::after {
     color: $white;
     font-size: 18px !important;
@@ -55,6 +57,7 @@
     background: rgba(255, 255, 255, 0.7);
     cursor: pointer;
   }
+
   .swiper-pagination-bullet-active {
     background: $yellow;
   }
@@ -86,86 +89,19 @@
       overflow: hidden;
       background: #ddd;
       border-radius: 8px;
+
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
     }
+
     // categories__card-title
     &-title {
       @include font(1.125rem, 400, 1.75rem, $blue);
       margin-top: 1.25rem;
       text-align: center;
-    }
-  }
-}
-
-// ABOUT US
-.about-us {
-  // about-us__info
-  &__info {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
-    }
-    // about-us__info-description
-    &-description {
-      @include font(1.2rem, 400, 2rem, $dark);
-      margin-bottom: 2rem;
-
-      @media screen and (max-width: 425px) {
-        font-size: 1rem;
-        line-height: 1.25rem;
-        margin-bottom: 1rem;
-      }
-    }
-  }
-  // about-us__status
-  &__status {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    div {
-      min-height: 125px;
-      display: flex;
-      gap: 0.5rem;
-      align-items: center;
-      background: #eee;
-      padding: 1rem;
-      border-radius: 8px;
-      @media screen and (max-width: 425px) {
-        padding: 0.5rem;
-      }
-      i {
-        font-size: 3rem;
-        color: $yellow;
-        display: block;
-        width: 60px;
-        text-align: center;
-        @media screen and (max-width: 425px) {
-          font-size: 2.5rem;
-        }
-      }
-      div {
-        @include font(2.5rem, 700, 2.25rem, $dark);
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: center;
-        gap: 0.5rem;
-        @media screen and (max-width: 425px) {
-          font-size: 2rem;
-        }
-        span {
-          @include font(1.5rem, 300, 1.5rem, $dark);
-          @media screen and (max-width: 425px) {
-            font-size: 1rem;
-          }
-        }
-      }
     }
   }
 }
@@ -194,7 +130,233 @@
   }
 }
 
-// STORES ADDRESES
+// BONUS
+.bonus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @media screen and (max-width: 740px) {
+    flex-direction: column;
+    align-items: flex-start;
+    .bonus__img {
+      max-width: 60%;
+      min-width: 80%;
+      align-self: center;
+    }
+  }
+  //  bonus__description
+  &__description {
+    @include font(1rem, 500, 1.5rem, $dark);
+    flex-shrink: 0;
+    width: 500px;
+    @media screen and (max-width: 850px) {
+      width: 400px;
+    }
+    @media screen and (max-width: 740px) {
+      width: 100%;
+    }
+  }
+
+  //  bonus__img
+  &__img {
+    width: 50%;
+    max-width: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// VACANCY
+
+
+// FAQ
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .accordion {
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: left;
+    @include font(1.2rem, 600, 1.2rem, $blue);
+
+    span {
+      padding: 0 15px;
+      font-size: 1.5rem;
+    }
+
+    &.active,
+    &:hover {
+      background-color: rgb(51, 50, 50, .4);
+      color: #fff;
+    }
+
+    &:after {
+      content: "\002B";
+      color: $blue;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+
+    &.active {
+      border-radius: 8px 8px 0 0;
+
+      &:after {
+        content: "\2212";
+      }
+    }
+  }
+
+  .panel {
+    padding: 0 18px;
+    background-color: rgb(51, 50, 50, .7);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-radius: 0 0 8px 8px;
+
+    p {
+      font-size: 16px;
+      margin: 10px;
+      color: $white;
+    }
+  }
+}
+
+
+// SOCIAL NETWORKS
+.social-networks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  //  social-networks__item
+  &__item {
+    @include font(1rem, 500, 2rem, $blue);
+    flex-grow: 1;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    background: $white;
+    padding: 2rem 4rem;
+    border-radius: 8px;
+    transition: all .15s ease;
+
+    &:first-child i {
+      color: #2FABEB;
+    }
+
+    &:nth-child(2) i {
+      color: #0866FF;
+    }
+
+    &:nth-child(3) i {
+      color: #E1475C;
+    }
+
+    &:last-child i {
+      color: #FD080A;
+    }
+
+    &:hover {
+      box-shadow: 0 0 25px 1px $blue;
+    }
+
+    i {
+      @include font(3rem, 500, 3rem, $light-blue);
+    }
+  }
+}
+
+// ABOUT US
+.about-us {
+  // about-us__info
+  &__info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+    // about-us__info-description
+    &-description {
+      @include font(1.2rem, 400, 2rem, $dark);
+      margin-bottom: 2rem;
+
+      @media screen and (max-width: 425px) {
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  // about-us__status
+  &__status {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    div {
+      min-height: 125px;
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      background: #eee;
+      padding: 1rem;
+      border-radius: 8px;
+      @media screen and (max-width: 425px) {
+        padding: 0.5rem;
+      }
+
+      i {
+        font-size: 3rem;
+        color: $yellow;
+        display: block;
+        width: 60px;
+        text-align: center;
+        @media screen and (max-width: 425px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      div {
+        @include font(2.5rem, 700, 2.25rem, $dark);
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 0.5rem;
+        @media screen and (max-width: 425px) {
+          font-size: 2rem;
+        }
+
+        span {
+          @include font(1.5rem, 300, 1.5rem, $dark);
+          @media screen and (max-width: 425px) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// STORES ADDRESSES
 .store-addresses {
   .select-input {
     @include font(1rem, 400, 1rem, $dark);
@@ -204,6 +366,7 @@
     // width: 250px;
     border-radius: 8px;
   }
+
   .store-branches-wrapper {
     display: flex;
     @media screen and (max-width: 768px) {
@@ -215,6 +378,7 @@
       }
     }
   }
+
   .store-branches {
     width: 30%;
     max-height: 600px;
@@ -244,15 +408,18 @@
       transition: background 0.15s ease;
       border-radius: 8px;
       border: 1px solid #eee;
+
       &:hover,
       &.active {
         background: $white;
         border-color: #93c5fd;
       }
+
       i {
         font-size: 1.5rem;
         color: $yellow;
       }
+
       // store-branches__item-title
       &-title {
         @include font(1.2rem, 600, 1.2rem, $dark);
@@ -260,16 +427,19 @@
         align-items: center;
         justify-content: space-between;
         gap: 4px;
+
         span {
           @include font(0.7rem, 400, 1.2rem, $light-dark);
         }
       }
+
       // store-branches__item-subtitle
       &-subtitle {
         @include font(0.8rem, 400, 1rem, $dark);
       }
     }
   }
+
   .map {
     width: 70%;
   }

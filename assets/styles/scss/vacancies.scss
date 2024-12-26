@@ -2,57 +2,6 @@
 @import "variables";
 @import "base";
 @import "header";
+@import "vacancy";
 @import "footer";
 
-.vacancies-wrapper {
-  margin-bottom: 3rem;
-
-  .figure {
-    width: 100%;
-    margin: 2rem 0;
-    //  figure__img
-    &__img {
-      width: 100%;
-      height: 500px;
-      border-radius: 8px;
-      overflow: hidden;
-
-      img {
-        width: 100%;
-        height: 100%;
-        //object-fit: cover;
-        object-position: top;
-      }
-    }
-
-    //  figure__figcaption
-    &__figcaption {
-      @include font(2rem, 500, 2rem, $dark);
-      margin-top: 1rem;
-    }
-  }
-
-  .list {
-    margin: 0 0 2rem 4rem;
-    //  list__title
-    &__title {
-      @include font(1.8rem, 500, 2.3  rem, $dark);
-    }
-
-    //  list__item
-    &__item {
-      @include font(1.5rem, 400, 2.5rem, $dark);
-      list-style: circle;
-      margin-left: 3rem;
-    }
-  }
-
-  .working-time {
-    @include font(1.2rem, 500, 2rem, $dark);
-    display: block;
-    margin-bottom: 2rem;
-    background: #eee;
-    padding: 1rem;
-    border-radius: 8px;
-  }
-}
