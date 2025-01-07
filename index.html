@@ -1,334 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="shortcut icon" href="assets/img/logo/H.png" type="png"/>
-    <link rel="stylesheet" href="./assets/styles/css/main.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/img/logo/H.png" type="png" />
+    <link rel="stylesheet" href="./assets/styles/css/main.css" />
     // css
-    <link rel="stylesheet" href="./assets/icons/fontawesome/css/all.min.css"/>
+    <link rel="stylesheet" href="./assets/icons/fontawesome/css/all.min.css" />
     // icons
     <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
     <title>Hamroh</title>
-</head>
-<body>
-<!-- HEADER -->
-<header id="header" class="header">
-    <div class="container header-nav-wrapper">
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header id="header" class="header">
+      <div class="container header-nav-wrapper">
         <!-- left -->
         <nav class="nav">
-            <a href="/" class="nav__logo">
-                <img
-                        src="./assets/img/logo/hamroh.svg"
-                        alt="logo, Hamroh qulaylikka bir qadam"
-                />
-            </a>
-            <ul id="nav-list" class="nav-list"></ul>
+          <a href="/" class="nav__logo">
+            <img
+              src="./assets/img/logo/hamroh.svg"
+              alt="logo, Hamroh qulaylikka bir qadam"
+            />
+          </a>
+          <ul id="nav-list" class="nav-list"></ul>
         </nav>
 
         <!-- right -->
         <div class="language">
-            <a class="header__phone" href="tel:+998558014444">
-                <i class="fa-solid fa-phone-volume"></i>
-                (+998) 55 8014444
-            </a>
-            <button class="header__lang">
-                <img src="./assets/img/uz.png" alt="flag"/> Uz
-            </button>
+          <a class="header__phone" href="tel:+998558014444">
+            <i class="fa-solid fa-phone-volume"></i>
+            (+998) 55 8014444
+          </a>
+          <button class="header__lang">
+            <img src="./assets/img/uz.png" alt="flag" /> Uz
+          </button>
         </div>
         <span id="burger">
           <i class="fa-solid fa-bars"></i>
         </span>
-    </div>
+      </div>
 
-    <div class="sidebar">
+      <div class="sidebar">
         <span class="sidebar__hide-btn">
           <i class="fa-solid fa-xmark"></i>
         </span>
         <ul id="sidebarList" class="nav-list"></ul>
-    </div>
-</header>
+      </div>
+    </header>
 
-<!-- MAIN -->
-<main class="main">
-    <div class="container">
+    <!-- MAIN -->
+    <main class="main">
+      <div class="container">
         <!-- SLIDER & CATEGORY -->
         <section class="section">
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
 
-            <!-- categories -->
-            <div class="categories"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+          <!-- categories -->
+          <div class="categories"></div>
         </section>
 
         <!-- SHORT SALES -->
         <section class="section">
-            <div
-                    style="
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-          "
-            >
-                <h2 class="section__title" style="margin-bottom: 0">Aksiyalar</h2>
-                <a class="base-button" href="./pages/sales.html">
-                    Barchasini ko'rish
-                    <i class="fa-solid fa-arrow-right-long"></i>
-                </a>
-            </div>
-            <div class="short-sales"></div>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              margin-bottom: 2rem;
+            "
+          >
+            <h2 class="section__title" style="margin-bottom: 0">Aksiyalar</h2>
+            <a class="base-button" href="./pages/sales.html">
+              Barchasini ko'rish
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+          </div>
+          <div class="short-sales"></div>
         </section>
-    </div>
+      </div>
 
-    <!-- BONUS -->
-    <section class="section" style="background: #CCF2D6;">
+      <!-- BONUS -->
+      <section class="section" style="background: #d0e2f6">
         <div class="bonus container">
-            <div class="bonus__img">
-                <img src="./assets/img/bonus.png" alt="bonus">
-            </div>
+          <div class="bonus__img">
+            <img src="./assets/img/bonus.png" alt="bonus" />
+          </div>
 
-            <div>
-                <h2 class="section__title">Bonus tizimi</h2>
-                <p class="bonus__description">
-                    Do‘konlarimizdan amalga oshirilgan har bir xarid uchun, xarid qiymatidan BONUS taqdim etiladi va
-                    ulardan
-                    kelgusida boshqa mahsulotlarni xarid qilishda foydalanish mumkin. Xarid qilayotgan
-                    mahsulotingizning
-                    qiymati bonus qiymatidan ortiq bo‘lgan taqdirda, qiymatning qolgan qismini qo‘shimcha to‘lov
-                    qilish
-                    orqali mahsulotni xarid qilishingiz mumkin. Bonuslar sifatida berilgan qiymat naqd pul
-                    ko‘rinishida
-                    berilmaydi hamda oylik to‘lov uchun ham o‘tkazilmaydi.
-                </p>
-            </div>
+          <div>
+            <h2 class="section__title">Bonus tizimi</h2>
+            <p class="bonus__description">
+              Do‘konlarimizdan amalga oshirilgan har bir xarid uchun, xarid
+              qiymatidan BONUS taqdim etiladi va ulardan kelgusida boshqa
+              mahsulotlarni xarid qilishda foydalanish mumkin. Xarid qilayotgan
+              mahsulotingizning qiymati bonus qiymatidan ortiq bo‘lgan taqdirda,
+              qiymatning qolgan qismini qo‘shimcha to‘lov qilish orqali
+              mahsulotni xarid qilishingiz mumkin. Bonuslar sifatida berilgan
+              qiymat naqd pul ko‘rinishida berilmaydi hamda oylik to‘lov uchun
+              ham o‘tkazilmaydi.
+            </p>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <div class="container">
+      <div class="container">
         <!-- VACANCY -->
         <section class="section">
-            <h2 class="section__title">Vakansiya</h2>
-            <div class="vacancy">
-                <div class="vacancy__description">
-                    <h2 class="vacancy__title">Ishni <span style="color: #fdc901">HAMROH</span>dan boshlang</h2>
-                    <ul class="vacancy-list">
-                        <h3 class="vacancy-list__title">Takliflar</h3>
-                        <li class="vacancy-list__item">Raqobatdosh maosh</li>
-                        <li class="vacancy-list__item">Lavozim o'sib borishi</li>
-                        <li class="vacancy-list__item">Kompaniya hisobidan bepul o‘qitish</li>
-                        <li class="vacancy-list__item">Rasmiy ishga qabul qilish</li>
-                        <li class="vacancy-list__item">Kompaniya hisobidan bepul tushlik</li>
-                        <li class="vacancy-list__item">O’z vaqtida oylik maosh</li>
-                    </ul>
-                    <a class="base-button" href="https://t.me/hamroh_work_bot" target="_blank">Rezyume qoldirish</a>
-                </div>
-
-                <div class="vacancy__img">
-                    <img src="./assets/img/vacancy/rm.png" alt="">
-                </div>
+          <h2 class="section__title">Vakansiya</h2>
+          <div class="vacancy">
+            <div class="vacancy__description">
+              <h2 class="vacancy__title">
+                Ishni <span style="color: #fdc901">HAMROH</span>dan boshlang
+              </h2>
+              <ul class="vacancy-list">
+                <h3 class="vacancy-list__title">Takliflar</h3>
+                <li class="vacancy-list__item">Raqobatdosh maosh</li>
+                <li class="vacancy-list__item">Lavozim o'sib borishi</li>
+                <li class="vacancy-list__item">
+                  Kompaniya hisobidan bepul o‘qitish
+                </li>
+                <li class="vacancy-list__item">Rasmiy ishga qabul qilish</li>
+                <li class="vacancy-list__item">
+                  Kompaniya hisobidan bepul tushlik
+                </li>
+                <li class="vacancy-list__item">O’z vaqtida oylik maosh</li>
+              </ul>
+              <a
+                class="base-button"
+                href="https://t.me/hamroh_work_bot"
+                target="_blank"
+                >Rezyume qoldirish</a
+              >
             </div>
+
+            <div class="vacancy__img">
+              <img src="./assets/img/vacancy/rm.png" alt="" />
+            </div>
+          </div>
         </section>
 
         <!-- FAQ -->
         <section class="section">
-            <h2 class="section__title">Faq</h2>
-            <!-- acardion start -->
-            <div class="faq-list">
-                <div>
-                    <button class="accordion"><span>01</span>Non consectetur a erat nam at lectus urna duis?
-                    </button>
-                    <div class="panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div>
-                    <button class="accordion"><span>02</span>Non consectetur na duis?</button>
-                    <div class="panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-                <div>
-                    <button class="accordion"><span>03</span>Non consectetur a lectus urna duis?</button>
-                    <div class="panel">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                </div>
-
+          <h2 class="section__title">Faq</h2>
+          <!-- acardion start -->
+          <div class="faq-list">
+            <div>
+              <button class="accordion">
+                <span>01</span>Non consectetur a erat nam at lectus urna duis?
+              </button>
+              <div class="panel">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
             </div>
-            <!-- acardion end -->
-
+            <div>
+              <button class="accordion">
+                <span>02</span>Non consectetur na duis?
+              </button>
+              <div class="panel">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+            <div>
+              <button class="accordion">
+                <span>03</span>Non consectetur a lectus urna duis?
+              </button>
+              <div class="panel">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- acardion end -->
         </section>
-    </div>
+      </div>
 
-    <!-- SOCIAL NETWORKS -->
-    <section class="section" style="background: #016bd9; padding: 4rem 0;">
+      <!-- SOCIAL NETWORKS -->
+      <section class="section" style="background: #016bd9; padding: 4rem 0">
         <div class="container">
-            <h2 class="section__title section__title_white">Biz ijtimoiy tarmoqlarda</h2>
-            <div class="social-networks">
-                <a class="social-networks__item" href="#" target="_blank">
-                    <i class="fa-brands fa-telegram"></i>
-                    Telegram
-                </a>
-                <a class="social-networks__item" href="#" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
-                    Facebook
-                </a>
-                <a class="social-networks__item" href="#" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                    Instagram
-                </a>
-                <a class="social-networks__item" href="#" target="_blank">
-                    <i class="fa-brands fa-youtube"></i>
-                    Youtube
-                </a>
-            </div>
+          <h2 class="section__title section__title_white">
+            Biz ijtimoiy tarmoqlarda
+          </h2>
+          <div class="social-networks">
+            <a class="social-networks__item" href="#" target="_blank">
+              <i class="fa-brands fa-telegram"></i>
+              Telegram
+            </a>
+            <a class="social-networks__item" href="#" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+              Facebook
+            </a>
+            <a class="social-networks__item" href="#" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+              Instagram
+            </a>
+            <a class="social-networks__item" href="#" target="_blank">
+              <i class="fa-brands fa-youtube"></i>
+              Youtube
+            </a>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <div class="container">
+      <div class="container">
         <!-- ABOUT US -->
         <section class="section about-us">
-            <h2 class="section__title">Biz haqimizda</h2>
-            <div class="about-us__info">
-                <div>
-                    <p class="about-us__info-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-                        itaque doloribus animi sint! Quo, optio. Molestiae veniam deserunt
-                        ratione quod odit, accusantium libero illum eum, ipsam repudiandae
-                        culpa, officiis recusandae.
-                    </p>
-                    <p class="about-us__info-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-                        itaque doloribus animi sint! Quo, optio. Molestiae veniam deserunt
-                        ratione quod odit, accusantium libero illum eum, ipsam repudiandae
-                        culpa, officiis recusandae.
-                    </p>
-                </div>
-
-                <div class="about-us__status">
-                    <div>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            50
-                            <span>dan ortiq do'kon</span>
-                        </div>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <div>
-                            500
-                            <span>dan ortiq muddatli to‘lov asosida mahsulotlar</span>
-                        </div>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-truck"></i>
-                        <div>
-                            Bepul
-                            <span>yetkazish va o‘rnatish </span>
-                        </div>
-                    </div>
-                </div>
+          <h2 class="section__title">Biz haqimizda</h2>
+          <div class="about-us__info">
+            <div>
+              <p class="about-us__info-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+                itaque doloribus animi sint! Quo, optio. Molestiae veniam
+                deserunt ratione quod odit, accusantium libero illum eum, ipsam
+                repudiandae culpa, officiis recusandae.
+              </p>
+              <p class="about-us__info-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+                itaque doloribus animi sint! Quo, optio. Molestiae veniam
+                deserunt ratione quod odit, accusantium libero illum eum, ipsam
+                repudiandae culpa, officiis recusandae.
+              </p>
             </div>
+
+            <div class="about-us__status">
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  50
+                  <span>dan ortiq do'kon</span>
+                </div>
+              </div>
+              <div>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div>
+                  500
+                  <span>dan ortiq muddatli to‘lov asosida mahsulotlar</span>
+                </div>
+              </div>
+              <div>
+                <i class="fa-solid fa-truck"></i>
+                <div>
+                  Bepul
+                  <span>yetkazish va o‘rnatish </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- STORE ADDRESSES -->
         <section class="section store-addresses">
-            <h2 class="section__title" style="margin-bottom: 0">
-                Do'kon mazillari
-            </h2>
+          <h2 class="section__title" style="margin-bottom: 0">
+            Do'kon mazillari
+          </h2>
 
-            <div class="store-branches-wrapper" style="margin-top: 2rem">
-                <!-- store branches -->
-                <div class="store-branches">
-                    <select class="select-input" name="areas" id="areas">
-                    </select>
-                    <!-- search input -->
-                    <input
-                            class="store-branches__search-input"
-                            type="text"
-                            placeholder="Search"
-                    />
-                    <!-- branches will be dynamically rendered -->
-                    <div id="branches" style="display: flex; flex-direction: column; gap: 1rem;"></div>
-                </div>
-
-                <!-- map -->
-                <div class="map">
-                    <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23269.792948180904!2d70.90882177375195!3d40.53616927748443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38baefe46ba79703%3A0xad5a747ee28cdf0b!2sHamroh%20kredit-savdo%20Qo&#39;qon%20filiali!5e0!3m2!1sen!2s!4v1733918039979!5m2!1sen!2s"
-                            height="600"
-                            style="border: 0; width: 100%"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                </div>
+          <div class="store-branches-wrapper" style="margin-top: 2rem">
+            <!-- store branches -->
+            <div class="store-branches">
+              <select class="select-input" name="areas" id="areas"></select>
+              <!-- search input -->
+              <input
+                class="store-branches__search-input"
+                type="text"
+                placeholder="Search"
+              />
+              <!-- branches will be dynamically rendered -->
+              <div
+                id="branches"
+                style="display: flex; flex-direction: column; gap: 1rem"
+              ></div>
             </div>
+
+            <!-- map -->
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23269.792948180904!2d70.90882177375195!3d40.53616927748443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38baefe46ba79703%3A0xad5a747ee28cdf0b!2sHamroh%20kredit-savdo%20Qo&#39;qon%20filiali!5e0!3m2!1sen!2s!4v1733918039979!5m2!1sen!2s"
+                height="600"
+                style="border: 0; width: 100%"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
         </section>
-    </div>
+      </div>
+    </main>
 
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <nav class="nav container">
+    <!-- FOOTER -->
+    <footer class="footer">
+      <nav class="nav container">
         <!-- left -->
         <div>
-            <a class="nav__logo" href="index.html">
-                <img src="assets/img/logo/hamroh-white.svg" alt="Hamrog logo"/>
-            </a>
-            <!-- social networks -->
-            <ul class="nav-social-networks">
-                <li>
-                    <a href="#">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-brands fa-telegram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                </li>
-            </ul>
+          <a class="nav__logo" href="index.html">
+            <img src="assets/img/logo/hamroh-white.svg" alt="Hamrog logo" />
+          </a>
+          <!-- social networks -->
+          <ul class="nav-social-networks">
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-telegram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+          </ul>
         </div>
 
         <!-- center -->
@@ -336,25 +355,25 @@
 
         <!-- right -->
         <ul class="nav-list">
-            <li class="nav-list__item">
-                <a class="nav-list__item-link" href="tel:+998558014444">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    (+998) 55 8014444
-                </a>
-            </li>
-            <li class="nav-list__item">
-                <a class="nav-list__item-link" href="#">
-                    <i class="fa-regular fa-envelope"></i>
-                    info@hamroh.com
-                </a>
-            </li>
+          <li class="nav-list__item">
+            <a class="nav-list__item-link" href="tel:+998558014444">
+              <i class="fa-solid fa-phone-volume"></i>
+              (+998) 55 8014444
+            </a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__item-link" href="#">
+              <i class="fa-regular fa-envelope"></i>
+              info@hamroh.com
+            </a>
+          </li>
         </ul>
-    </nav>
-</footer>
+      </nav>
+    </footer>
 
-<!-- SCRIPT -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="js/main.js"></script>
-<script type="module" src="js/index.js"></script>
-</body>
+    <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="module" src="js/index.js"></script>
+  </body>
 </html>
