@@ -2,13 +2,14 @@
 import { parametrs } from "../helpers/options.js";
 
 class Store {
-  constructor(img, name, address, workTime, phone, location) {
+  constructor(img, name, address, workTime, phone, location, defaultImg) {
     this.img = img;
     this.name = name;
     this.address = address;
     this.workTime = workTime;
     this.phone = phone;
     this.location = location;
+    this.defaultImg = defaultImg;
   }
 
   render() {
@@ -17,6 +18,7 @@ class Store {
       <div class="store">
         <figure class="store__img">
           <img src="${this.img}" alt="${this.name}" />
+          <span>${this.defaultImg ? "" : "*Do'konning asl surati emas"}</span>
         </figure>
         <div>
           <div class="store__info">
@@ -39,7 +41,9 @@ class Store {
           </div>
           <div class="store__info">
             <i class="fa-solid fa-route"></i>
-            <a href="${this.location}" target="_blank" class="store__title store__title_link">Yoʻnalishlar uchun xaritaga qarang</a>
+            <a href="${
+              this.location
+            }" target="_blank" class="store__title store__title_link">Yoʻnalishlar uchun xaritaga qarang</a>
           </div>
         </div>
       </div>
@@ -58,7 +62,7 @@ const submit = document.querySelector(".form #submit");
 const clearBtn = document.querySelector(".form #clear-btn"); // Clear button
 
 // Fill area select options
-regions.forEach(item => {
+regions.forEach((item) => {
   stores.push(...item.branches);
   const option = document.createElement("option");
   option.value = item.id;
@@ -71,7 +75,7 @@ function fillCityOptions() {
   // Clear previous city options
   city.innerHTML = "<option value='0'>Shaharni tanlang</option>";
 
-  stores.forEach(item => {
+  stores.forEach((item) => {
     const option = document.createElement("option");
     option.value = item.id;
     option.innerText = item.name;
@@ -86,9 +90,11 @@ function updateCityOptions(areaId) {
 
   // If area is selected, filter cities by that area
   if (areaId !== "0" && areaId !== "") {
-    const selectedRegion = regions.find(region => region.id === parseInt(areaId));
+    const selectedRegion = regions.find(
+      (region) => region.id === parseInt(areaId)
+    );
     if (selectedRegion) {
-      selectedRegion.branches.forEach(branch => {
+      selectedRegion.branches.forEach((branch) => {
         const option = document.createElement("option");
         option.value = branch.id;
         option.innerText = branch.name;
@@ -107,9 +113,10 @@ const filterState = { areaId: "", cityId: "" };
 // Filter stores based on selected area and city
 function filterStores(areaId, cityId) {
   return parametrs.regions.reduce((filteredStores, region) => {
-    if (areaId && areaId !== "0" && region.id !== parseInt(areaId)) return filteredStores;
+    if (areaId && areaId !== "0" && region.id !== parseInt(areaId))
+      return filteredStores;
 
-    const filteredBranches = region.branches.filter(branch => {
+    const filteredBranches = region.branches.filter((branch) => {
       return !cityId || cityId === "0" || branch.id === parseInt(cityId);
     });
 
@@ -126,18 +133,18 @@ function applyFilters() {
 }
 
 // Event listeners for select inputs to update state
-area.addEventListener("change", e => {
+area.addEventListener("change", (e) => {
   filterState.areaId = e.target.value;
   updateCityOptions(filterState.areaId); // Update city options based on selected area
   // applyFilters();
 });
 
-city.addEventListener("change", e => {
+city.addEventListener("change", (e) => {
   filterState.cityId = e.target.value;
   // applyFilters();
 });
 
-submit.addEventListener("click", e => {
+submit.addEventListener("click", (e) => {
   e.preventDefault();
   applyFilters();
 });
@@ -145,18 +152,18 @@ submit.addEventListener("click", e => {
 // Clear button event listener to reset the filters
 clearBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  
+
   // Reset select inputs
   area.value = "0";
   city.value = "0";
-  
+
   // Reset filterState
   filterState.areaId = "";
   filterState.cityId = "";
-  
+
   // Fill city options again if no area is selected
   fillCityOptions();
-  
+
   // Apply filters with empty values
   applyFilters();
 });
@@ -173,17 +180,20 @@ function paginate(array, page, itemsPerPage) {
 
 function renderData(items) {
   const container = document.querySelector(".main .stores-wrapper");
-  container.innerHTML = items.length ? "" : "<p>Hech qanday ma’lumot topilmadi!</p>";
+  container.innerHTML = items.length
+    ? ""
+    : "<p>Hech qanday ma’lumot topilmadi!</p>";
 
   const fragment = new DocumentFragment();
-  items.forEach(item => {
+  items.forEach((item) => {
     const store = new Store(
-      "../assets/img/stores/hamroh.webp",
+      item.img ? item.img : "../assets/img/stores/default1.png",
       item.name,
       item.address,
       `${item.workTime.open} - ${item.workTime.close}`,
       "+998558014444",
-      item.location
+      item.location,
+      item.img ? true : false
     );
     fragment.append(store.render());
   });
