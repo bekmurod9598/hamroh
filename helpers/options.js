@@ -8,7 +8,6 @@ export const parametrs = {
           id: 11,
           name: "Qo‘qon",
           address: "Qo‘qon shaxar, Turkiston ko‘chasi 130-uy",
-          img: "https:picsum.photos/id/98/1200/560",
           location:
             "https://maps.google.com/maps?q=40.532350,70.942634&ll=40.532350,70.942634&z=16",
           workTime: {
