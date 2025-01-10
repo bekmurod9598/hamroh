@@ -7,6 +7,9 @@
 @font-face {
   font-family: Gilory;
   src: url("../../fonts/Gilroy-Medium.eot") format("eot"), url("../../fonts/Gilroy-Medium.ttf") format("truetype"), url("../../fonts/Gilroy-Medium.woff") format("woff"), url("../../fonts/Gilroy-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 body {
   font-family: "Gilory", sans-serif;
@@ -88,6 +91,16 @@ a {
 }
 .section__title_white {
   color: white;
+}
+.section__title_blue {
+  color: #1f3664;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.section__title_blue img {
+  width: 32px;
+  color: red;
 }
 .section__subtitle {
   font-size: 1.2rem;
