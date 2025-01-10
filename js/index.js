@@ -178,25 +178,41 @@ let shortSalesFragment = new DocumentFragment();
 
 const shortSales = [
   {
-    img: "../assets/img/sales/chegirma.jpg",
-  },
-  {
+    title: "“0-0-6” Aksiyasi",
+    description:
+      "Belgilangan turdagi smartfonlarni 0-0-6 aksiyasi doirasida xarib qiling",
     img: "../assets/img/sales/phone.jpg",
+    discountPeriod: {
+      from: "18.09.2024",
+      to: "25.09.2024",
+    },
   },
   {
+    title: "Chegirmamisan Chegirma",
+    description: "Epa mahsulotlarini 20% lik chegirmada xarid qiling",
     img: "../assets/img/sales/tools.jpg",
+    discountPeriod: {
+      from: "27.10.2024",
+      to: "31.10.2024",
+    },
+  },
+  {
+    title: "“Yangi yil shukuxi” aksiyasi",
+    description: "Avtomat kir yuvish mashinalari uchun 40% ChEGIRMA",
+    img: "../assets/img/sales/chegirma.jpg",
+    discountPeriod: {
+      from: "18.12.2024",
+      to: "31.12.2024",
+    },
   },
 ];
 shortSales.forEach((item, index) => {
   const el = new ShortSales(
     item.img,
-    "image alt",
-    {
-      from: "20.11.2024",
-      to: "19.12.2024",
-    },
-    "Title",
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    item.title,
+    item.discountPeriod,
+    item.title,
+    item.description,
     108 + index
   );
   shortSalesFragment.append(el.render());
