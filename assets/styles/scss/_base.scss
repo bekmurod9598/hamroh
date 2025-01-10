@@ -83,9 +83,20 @@ a {
       margin-bottom: 1rem;
     }
     //section__title_white
-      &_white{
-        color: white;
+    &_white {
+      color: white;
+    }
+    // section__title_blue
+    &_blue {
+      color: $blue;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      img {
+        width: 32px;
+        color: red
       }
+    }
   }
   // section__subtitle
   &__subtitle {
