@@ -141,3 +141,25 @@ a {
     }
   }
 }
+
+// breadcrumb
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  // breadcrumb__item
+  &__item {
+    @include font(1rem, 400, 0.75rem, $light-dark);
+    a {
+      @include font(1rem, 400, 0.75rem, $light-blue);
+      transition: color 0.15s ease;
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+  // breadcrumb__icon
+  &__icon {
+    color: $light-dark;
+  }
+}

@@ -17,35 +17,8 @@
   }
 }
 
-// SLUG PAGE
-.breadcrumb-list {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-  @media screen and (max-width: 768px) {
-    margin-bottom: 1rem;
-  }
-  // breadcrumb-list__item
-  &__item,
-  &__item-link {
-    @include font(1.5rem, 600, 2rem, #a3a3a3);
-  }
-  // breadcrumb-list__item-link
-  &__item-link {
-    color: #737373;
-    transition: color 0.15s ease;
-    &:hover {
-      color: $blue;
-    }
-  }
-  i {
-    color: #a3a3a3;
-    line-height: 2rem;
-  }
-}
-
 .slug {
+  margin-top: 2rem;
   .remaining-days {
     display: flex;
     align-items: center;

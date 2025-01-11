@@ -4,12 +4,12 @@
 @import "header";
 @import "footer";
 
-
 .form-wrap {
   margin: 2rem 0 3rem;
   // form-wrap__title
   &__title {
     @include font(2rem, 500, 2.5rem, $dark);
+    margin-bottom: 2rem;
   }
 
   // form-wrap__box
@@ -17,9 +17,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     @media screen and (max-width: 600px) {
       flex-direction: column;
+    }
+    img {
+      border-radius: 1rem;
     }
   }
 
@@ -29,7 +32,7 @@
     min-width: 280px;
     padding: 1rem;
     //border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;

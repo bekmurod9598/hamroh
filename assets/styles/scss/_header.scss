@@ -41,7 +41,8 @@
         transition: color 0.15s ease;
         &:hover,
         &.active {
-          color: $yellow;
+          color: $light-blue;
+          text-decoration: underline;
         }
       }
     }
