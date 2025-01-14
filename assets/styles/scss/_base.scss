@@ -69,12 +69,12 @@ a {
   }
 }
 
-// each section
+// seach section
 .section {
   margin-bottom: 4rem;
   // section__title
   &__title {
-    @include font(2.25rem, 700, 2.5rem, $dark);
+    @include font(2.25rem, 700, 2.5rem, $blue);
     margin-bottom: 2rem;
     @media screen and (max-width: 768px) {
       font-size: 2rem;

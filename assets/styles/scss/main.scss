@@ -106,6 +106,46 @@
   }
 }
 
+// BEST SELLING
+.best-selling-wrap {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 26px;
+  .best-selling-product {
+    width: 100%;
+    border-radius: 12px;
+    // best-selling-product__img
+    &__img {
+      height: 240px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #1f366440;
+      padding: 30px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    // best-selling-product__name
+    &__name {
+      @include font(18px, 400, 21.6px, #000);
+      margin: 11px 0 14px;
+    }
+    // best-selling-product__indetail
+    &__indetail {
+      @include font(18px, 400, 22px, #000);
+      width: 135px;
+      border-radius: 10px;
+      background: $yellow;
+      padding: 8px;
+      cursor: pointer;
+    }
+  }
+}
+
 // SHORT SALES
 .short-sales {
   display: grid;
@@ -170,9 +210,6 @@
   }
 }
 
-// VACANCY
-
-
 // FAQ
 .faq-list {
   display: flex;
@@ -197,7 +234,7 @@
 
     &.active,
     &:hover {
-      background-color: rgb(51, 50, 50, .4);
+      background-color: rgb(51, 50, 50, 0.4);
       color: #fff;
     }
 
@@ -220,7 +257,7 @@
 
   .panel {
     padding: 0 18px;
-    background-color: rgb(51, 50, 50, .7);
+    background-color: rgb(51, 50, 50, 0.7);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -233,7 +270,6 @@
     }
   }
 }
-
 
 // SOCIAL NETWORKS
 .social-networks {
@@ -252,23 +288,24 @@
     align-items: center;
     background: $white;
     padding: 2rem 4rem;
+    border: 1px solid $light-blue;
     border-radius: 8px;
-    transition: all .15s ease;
+    transition: all 0.15s ease;
 
     &:first-child i {
-      color: #2FABEB;
+      color: #2fabeb;
     }
 
     &:nth-child(2) i {
-      color: #0866FF;
+      color: #0866ff;
     }
 
     &:nth-child(3) i {
-      color: #E1475C;
+      color: #e1475c;
     }
 
     &:last-child i {
-      color: #FD080A;
+      color: #fd080a;
     }
 
     &:hover {

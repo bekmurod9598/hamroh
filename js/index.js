@@ -1,5 +1,6 @@
 "use strict";
 import { parametrs } from "../helpers/options.js";
+import { turncate } from "../helpers/global.js";
 
 /** SLIDER */
 class Slider {
@@ -123,6 +124,103 @@ categories.forEach((item) => {
 
 document.querySelector(".main .categories").append(categoryFragment);
 
+// BEST SELLING
+class BestSelling {
+  constructor(img, name, details) {
+    this.img = img;
+    this.name = name;
+    this.details = details;
+  }
+
+  render() {
+    const element = document.createElement("div");
+    element.innerHTML = `
+      <div class="best-selling-product">
+        <figure class="best-selling-product__img">
+          <img src="${this.img}" alt="${this.name}">
+        </figure>
+        <h3 class="best-selling-product__name">${turncate(
+          this.name,
+          34,
+          "..."
+        )}</h3>
+        <button class="best-selling-product__indetail">Batafsil</button>
+      </div>
+      `;
+    return element;
+  }
+}
+let bestSellingFragment = new DocumentFragment();
+const bestSellingData = [
+  {
+    img: "../assets/img/best-selling/Iphone-15.png",
+    name: "Smartfon Samsung Galaxy A06 4/128, Qora",
+    details: {},
+  },
+  {
+    img: "../assets/img/best-selling/vivo.png",
+    name: "Vivo Y19s 6/128GB Black",
+    details: {},
+  },
+  {
+    img: "../assets/img/best-selling/kirmoshina.png",
+    name: "Kir yuvish mashinasi pol avtomat Vesta",
+    details: {},
+  },
+  {
+    img: "../assets/img/best-selling/isitgich.png",
+    name: "Issitgich Artel ART OH-13-72",
+    details: {},
+  },
+  {
+    img: "../assets/img/best-selling/aniradar.png",
+    name: "Radar detektori Neonline X-COP 8800 Wi-Fi",
+    details: {},
+  },
+  {
+    img: "../assets/img/best-selling/tv.png",
+    name: "Premier PRM 700 FHD LED",
+    details: {},
+  },
+  {
+    img: "../assets/img/best-selling/tecno-spark.png",
+    name: "Tecno Spark Go 2024 2/64GB Green",
+    details: {},
+  },
+  {
+    img: "../assets/img/best-selling/mixer.png",
+    name: "Sharbat chiqargich Vltek VT-3653",
+    details: {},
+  },
+  {
+    img: "../assets/img/best-selling/gazplita.png",
+    name: "Gaz plita Artel Milagro 01-K c GK (Black-Mat)",
+    details: {},
+  },
+  {
+    img: "../assets/img/best-selling/pech.png",
+    name: "Mini-pech Shivaki MD-4218 E (red&red)",
+    details: {},
+  },
+  {
+    img: "../assets/img/best-selling/smartwatch.png",
+    name: "Mi Band 6",
+    details: {},
+  },
+  {
+    img: "../assets/img/best-selling/xiaomi-redmi.png",
+    name: "Xiaomi Redmi 10A EU 3/64GB Gray",
+    details: {},
+  },
+];
+bestSellingData.forEach((item) => {
+  const el = new BestSelling(item.img, item.name, item.details);
+  bestSellingFragment.append(el.render());
+});
+
+document
+  .querySelector(".section .best-selling-wrap")
+  .append(bestSellingFragment);
 /** SHORT SALES */
 class ShortSales {
   constructor(img, alt = "", validityPeriod, title, description, view) {
