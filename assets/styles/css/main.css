@@ -501,6 +501,9 @@ a {
   line-height: 0.75rem;
   color: #fff;
   transition: color 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
 }
 .footer .nav-list__item-link:hover, .footer .nav-list__item-link.active {
   color: #fdc901;
@@ -621,7 +624,11 @@ a {
 }
 .best-selling-wrap .best-selling-product {
   width: 100%;
+  height: 346.5px;
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .best-selling-wrap .best-selling-product__img {
   height: 240px;

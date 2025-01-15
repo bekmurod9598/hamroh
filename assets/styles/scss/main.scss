@@ -113,7 +113,11 @@
   gap: 26px;
   .best-selling-product {
     width: 100%;
+    height: 346.5px;
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     // best-selling-product__img
     &__img {
       height: 240px;

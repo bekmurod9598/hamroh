@@ -136,14 +136,14 @@ class BestSelling {
     const element = document.createElement("div");
     element.innerHTML = `
       <div class="best-selling-product">
-        <figure class="best-selling-product__img">
-          <img src="${this.img}" alt="${this.name}">
-        </figure>
-        <h3 class="best-selling-product__name">${turncate(
-          this.name,
-          34,
-          "..."
-        )}</h3>
+        <div>
+          <figure class="best-selling-product__img">
+            <img src="${this.img}" alt="${this.name}">
+          </figure>
+          <h3 class="best-selling-product__name">
+            ${turncate(this.name, 34, "...")}
+          </h3>
+        </div>
         <button class="best-selling-product__indetail">Batafsil</button>
       </div>
       `;

@@ -425,6 +425,9 @@ a {
   line-height: 0.75rem;
   color: #fff;
   transition: color 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
 }
 .footer .nav-list__item-link:hover, .footer .nav-list__item-link.active {
   color: #fdc901;
