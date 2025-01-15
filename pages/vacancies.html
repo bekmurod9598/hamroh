@@ -1,109 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="shortcut icon" href="../assets/img/logo/H.png" type="png"/>
-    <link rel="stylesheet" href="../assets/styles/css/vacancies.css"/>
-    <link rel="stylesheet" href="../assets/icons/fontawesome/css/all.min.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/img/logo/H.png" type="png" />
+    <link rel="stylesheet" href="../assets/styles/css/vacancies.css" />
+    <link rel="stylesheet" href="../assets/icons/fontawesome/css/all.min.css" />
     <title>Vakansiyalar</title>
-</head>
-<body>
-<!-- HEADER -->
-<header id="header" class="header">
-    <div class="container header-nav-wrapper">
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header id="header" class="header">
+      <div class="container header-nav-wrapper">
         <!-- left -->
         <nav class="nav">
-            <a href="/" class="nav__logo">
-                <img
-                        src="../assets/img/logo/hamroh.svg"
-                        alt="logo, Hamroh qulaylikka bir qadam"
-                />
-            </a>
-            <ul id="nav-list" class="nav-list"></ul>
+          <a href="/" class="nav__logo">
+            <img
+              src="../assets/img/logo/hamroh.svg"
+              alt="logo, Hamroh qulaylikka bir qadam"
+            />
+          </a>
+          <ul id="nav-list" class="nav-list"></ul>
         </nav>
 
         <!-- right -->
         <div class="language">
-            <a class="header__phone" href="tel:+998558014444">
-                <i class="fa-solid fa-phone-volume"></i>
-                (+998) 55 8014444
-            </a>
-            <button class="header__lang">
-                <img src="../assets/img/uz.png" alt="flag"/> Uz
-            </button>
+          <a class="header__phone" href="tel:+998558014444">
+            <i class="fa-solid fa-phone-volume"></i>
+            (+998) 55 8014444
+          </a>
+          <button class="header__lang">
+            <img src="../assets/img/uz.png" alt="flag" /> Uz
+          </button>
         </div>
         <span id="burger">
           <i class="fa-solid fa-bars"></i>
         </span>
-    </div>
+      </div>
 
-    <div class="sidebar">
+      <div class="sidebar">
         <span class="sidebar__hide-btn">
           <i class="fa-solid fa-xmark"></i>
         </span>
         <ul id="sidebarList" class="nav-list"></ul>
-    </div>
-</header>
+      </div>
+    </header>
 
-<!-- MAIN -->
-<main class="container main">
-    <h1 class="main__title" style="margin-bottom: 3rem;">Vakansiyalar</h1>
-    <section class="section">
-        <div class="vacancy">
-            <div class="vacancy__description">
-                <h2 class="vacancy__title">Ishni <span style="color: #fdc901">HAMROH</span>dan boshlang</h2>
-                <ul class="vacancy-list">
-                    <h3 class="vacancy-list__title">Takliflar</h3>
-                    <li class="vacancy-list__item">Raqobatdosh maosh</li>
-                    <li class="vacancy-list__item">Lavozim o'sib borishi</li>
-                    <li class="vacancy-list__item">Kompaniya hisobidan bepul o‘qitish</li>
-                    <li class="vacancy-list__item">Rasmiy ishga qabul qilish</li>
-                    <li class="vacancy-list__item">Kompaniya hisobidan bepul tushlik</li>
-                    <li class="vacancy-list__item">O’z vaqtida oylik maosh</li>
-                </ul>
-                <a class="base-button" href="https://t.me/hamroh_work_bot" target="_blank">Rezyume qoldirish</a>
+    <!-- MAIN -->
+    <main class="container main">
+      <ul class="breadcrumb">
+        <li class="breadcrumb__item">
+          <a class="breadcrumb__item-link" href="/index.html">Bosh sahifa</a>
+        </li>
+        <i class="breadcrumb__icon fa-solid fa-chevron-right"></i>
+        <li class="breadcrumb__item">Vakansiyalar</li>
+      </ul>
+      <section class="section" style="margin-top: 38px">
+        <div class="vacancy vacancy_bg">
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              padding: 62px 81px;
+            "
+          >
+            <div>
+              <h2 class="vacancy__title vacancy__title_color">
+                Jamoamizga marhamat
+              </h2>
+              <ul class="vacancy-list">
+                <li class="vacancy-list__item">Raqobatdosh maosh</li>
+                <li class="vacancy-list__item">Lavozim o'sib borishi</li>
+                <li class="vacancy-list__item">
+                  Kompaniya hisobidan bepul o‘qitish
+                </li>
+                <li class="vacancy-list__item">Rasmiy ishga qabul qilish</li>
+                <li class="vacancy-list__item">O’z vaqtida oylik maosh</li>
+              </ul>
             </div>
+            <a
+              class="base-button base-button_bg"
+              href="https://t.me/hamroh_work_bot"
+              target="_blank"
+              style="align-self: flex-start"
+            >
+              Vakansiyalar haqida
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
 
-            <div class="vacancy__img">
-                <img src="../assets/img/vacancy/rm.png" alt="">
-            </div>
+          <figure class="vacancy__figure vacancy__figure_bg">
+            <img src="../assets/img/employee.png" alt="" />
+          </figure>
         </div>
-    </section>
+      </section>
+    </main>
 
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <nav class="nav container">
+    <!-- FOOTER -->
+    <footer class="footer">
+      <nav class="nav container">
         <!-- left -->
         <div>
-            <a class="nav__logo" href="/">
-                <img src="../assets/img/logo/hamroh-white.svg" alt="Hamrog logo"/>
-            </a>
-            <!-- social networks -->
-            <ul class="nav-social-networks">
-                <li>
-                    <a href="#">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-brands fa-telegram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                </li>
-            </ul>
+          <a class="nav__logo" href="/">
+            <img src="../assets/img/logo/hamroh-white.svg" alt="Hamrog logo" />
+          </a>
+          <!-- social networks -->
+          <ul class="nav-social-networks">
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-telegram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+          </ul>
         </div>
 
         <!-- center -->
@@ -111,24 +135,24 @@
 
         <!-- right -->
         <ul class="nav-list">
-            <li class="nav-list__item">
-                <a class="nav-list__item-link" href="tel:+998558014444">
-                    <i class="fa-solid fa-phone-volume"></i>
-                    (+998) 55 8014444
-                </a>
-            </li>
-            <li class="nav-list__item">
-                <a class="nav-list__item-link" href="#">
-                    <i class="fa-regular fa-envelope"></i>
-                    info@hamroh.com
-                </a>
-            </li>
+          <li class="nav-list__item">
+            <a class="nav-list__item-link" href="tel:+998558014444">
+              <i class="fa-solid fa-phone-volume"></i>
+              (+998) 55 8014444
+            </a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__item-link" href="#">
+              <i class="fa-regular fa-envelope"></i>
+              info@hamroh.com
+            </a>
+          </li>
         </ul>
-    </nav>
-</footer>
+      </nav>
+    </footer>
 
-<!-- SCRIPT -->
-<script src="../js/main.js"></script>
-<script type="module" src="../js/vacancies.js"></script>
-</body>
+    <!-- SCRIPT -->
+    <script src="../js/main.js"></script>
+    <script type="module" src="../js/vacancies.js"></script>
+  </body>
 </html>

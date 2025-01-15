@@ -142,6 +142,10 @@
       background: $yellow;
       padding: 8px;
       cursor: pointer;
+      transition: opacity .15s ease-in-out;
+      &:hover {
+        opacity: .8;
+      }
     }
   }
 }

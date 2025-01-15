@@ -74,7 +74,7 @@ a {
   margin-bottom: 4rem;
   // section__title
   &__title {
-    @include font(2.25rem, 700, 2.5rem, $blue);
+    @include font(2rem, 700, 2.5rem, $blue);
     margin-bottom: 2rem;
     @media screen and (max-width: 768px) {
       font-size: 2rem;
@@ -96,7 +96,7 @@ a {
       gap: 12px;
       img {
         width: 32px;
-        color: red
+        color: red;
       }
     }
   }
@@ -122,6 +122,11 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  // base-button_bg
+  &_bg{
+    background: $yellow;
+    color: $blue;
+  }
   i {
     line-height: 0;
   }
@@ -146,12 +151,12 @@ a {
 .breadcrumb {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 18px;
   // breadcrumb__item
   &__item {
-    @include font(1rem, 400, 0.75rem, $light-dark);
+    @include font(26px, 400, 31px, $blue);
     a {
-      @include font(1rem, 400, 0.75rem, $light-blue);
+      @include font(26px, 400, 31px, #1F36644d);
       transition: color 0.15s ease;
       &:hover {
         color: $yellow;
@@ -160,6 +165,6 @@ a {
   }
   // breadcrumb__icon
   &__icon {
-    color: $light-dark;
+    color: #1F36644d;
   }
 }

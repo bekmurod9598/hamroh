@@ -150,23 +150,23 @@ submit.addEventListener("click", (e) => {
 });
 
 // Clear button event listener to reset the filters
-clearBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+// clearBtn.addEventListener("click", (e) => {
+//   e.preventDefault();
 
-  // Reset select inputs
-  area.value = "0";
-  city.value = "0";
+//   // Reset select inputs
+//   area.value = "0";
+//   city.value = "0";
 
-  // Reset filterState
-  filterState.areaId = "";
-  filterState.cityId = "";
+//   // Reset filterState
+//   filterState.areaId = "";
+//   filterState.cityId = "";
 
-  // Fill city options again if no area is selected
-  fillCityOptions();
+//   // Fill city options again if no area is selected
+//   fillCityOptions();
 
-  // Apply filters with empty values
-  applyFilters();
-});
+//   // Apply filters with empty values
+//   applyFilters();
+// });
 
 /** PAGINATION */
 let currentPage = 1;
