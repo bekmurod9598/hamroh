@@ -79,6 +79,35 @@ const sales = [
       to: "31.12.2024",
     },
   },
+  //
+  {
+    title: "“Yangi yil shukuxi” aksiyasi",
+    description: "Avtomat kir yuvish mashinalari uchun 40% ChEGIRMA",
+    img: "../assets/img/sales/chegirma.jpg",
+    discountPeriod: {
+      from: "18.12.2024",
+      to: "31.12.2024",
+    },
+  },
+  {
+    title: "“0-0-6” Aksiyasi",
+    description:
+      "Belgilangan turdagi smartfonlarni 0-0-6 aksiyasi doirasida xarib qiling",
+    img: "../assets/img/sales/phone.jpg",
+    discountPeriod: {
+      from: "18.09.2024",
+      to: "25.09.2024",
+    },
+  },
+  {
+    title: "Chegirmamisan Chegirma",
+    description: "Epa mahsulotlarini 20% lik chegirmada xarid qiling",
+    img: "../assets/img/sales/tools.jpg",
+    discountPeriod: {
+      from: "27.10.2024",
+      to: "31.10.2024",
+    },
+  },
 ];
 
 function renderSales(params) {
@@ -103,6 +132,6 @@ renderSales(sales);
 const loadMore = document.querySelector("#sales #load-more");
 
 loadMore.addEventListener("click", () => {
-  sales.push(...sales.slice(0, 3));
+  sales.push(...sales.slice(0, 6));
   renderSales(sales);
 });

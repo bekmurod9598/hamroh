@@ -339,6 +339,33 @@ a {
   background: #f4f5f7;
   border-radius: 20px;
 }
+@media screen and (max-width: 768px) {
+  .vacancy {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.vacancy__info {
+  padding: 62px 81px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 1040px) {
+  .vacancy__info {
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .vacancy__info {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 576px) {
+  .vacancy__info {
+    padding: 1rem;
+  }
+}
 .vacancy_bg {
   height: 600px;
   background: #1f3664;
@@ -348,6 +375,18 @@ a {
   font-weight: 600;
   line-height: 4rem;
   color: #1f3664;
+}
+@media screen and (max-width: 768px) {
+  .vacancy__title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .vacancy__title {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
 }
 .vacancy__title_color {
   color: #fff;
@@ -372,6 +411,17 @@ a {
   background: linear-gradient(180deg, #016bd9 0%, #013973 100%);
   display: flex;
   align-items: end;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .vacancy__figure {
+    width: 100%;
+    height: 300px;
+  }
+  .vacancy__figure img {
+    width: auto !important;
+    height: 100%;
+  }
 }
 .vacancy__figure_bg {
   width: 550px;

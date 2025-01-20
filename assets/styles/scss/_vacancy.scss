@@ -4,6 +4,27 @@
   height: 500px;
   background: #f4f5f7;
   border-radius: 20px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
+  // vacancy__info
+  &__info {
+    padding: 62px 81px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (max-width: 1040px) {
+      padding: 2rem;
+    }
+    @media screen and (max-width: 768px) {
+      // padding: 2rem;
+      flex-direction: row;
+    }
+    @media screen and (max-width: 576px) {
+      padding: 1rem;
+    }
+  }
   // vacancy_bg
   &_bg {
     height: 600px;
@@ -12,6 +33,14 @@
   // vacancy__title
   &__title {
     @include font(3.5rem, 600, 4rem, $blue);
+    @media screen and (max-width: 768px) {
+      font-size: 2.5rem;
+      line-height: 3rem;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
     // vacancy__title_color
     &_color {
       color: #fff;
@@ -37,6 +66,15 @@
     background: linear-gradient(180deg, #016bd9 0%, #013973 100%);
     display: flex;
     align-items: end;
+    justify-content: center;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      height: 300px;
+      img {
+        width: auto !important;
+        height: 100%;
+      }
+    }
     // vacancy__figure_bg
     &_bg {
       width: 550px;
