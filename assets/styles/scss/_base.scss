@@ -65,7 +65,7 @@ a {
   padding-top: 2rem;
   // main__title
   &__title {
-    @include font(2rem, 700, 2rem, $dark);
+    @include font(2rem, 700, 2rem, $blue);
   }
 }
 
@@ -123,7 +123,7 @@ a {
   align-items: center;
   gap: 8px;
   // base-button_bg
-  &_bg{
+  &_bg {
     background: $yellow;
     color: $blue;
   }
@@ -156,7 +156,7 @@ a {
   &__item {
     @include font(26px, 400, 31px, $blue);
     a {
-      @include font(26px, 400, 31px, #1F36644d);
+      @include font(26px, 400, 31px, #1f36644d);
       transition: color 0.15s ease;
       &:hover {
         color: $yellow;
@@ -165,6 +165,6 @@ a {
   }
   // breadcrumb__icon
   &__icon {
-    color: #1F36644d;
+    color: #1f36644d;
   }
 }

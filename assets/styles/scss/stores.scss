@@ -21,7 +21,7 @@
       select {
         @include font(1rem, 600, 1rem, $dark);
         width: 350px;
-        padding: .8rem 1rem;
+        padding: 0.8rem 1rem;
         border: 1px solid $light-dark;
         border-radius: 8px;
       }
@@ -75,7 +75,7 @@
         height: 100%;
         object-fit: cover;
       }
-      span{
+      span {
         position: absolute;
         left: 1rem;
         bottom: 10px;
@@ -91,11 +91,6 @@
       &:not(:last-child) {
         margin-bottom: 1.5rem;
       }
-      i {
-        font-size: 1.25rem;
-        color: $yellow;
-        line-height: 1.5rem;
-      }
       &:nth-child(3) a {
         transition: color 0.15s ease;
         &:hover {
@@ -105,15 +100,19 @@
     }
     // store__title
     &__title {
-      @include font(1.2rem, 500, 1.5rem, $dark);
+      @include font(1.5rem, 400, 2rem, $blue);
       @media screen and (max-width: 425px) {
         font-size: 1rem;
       }
       // store__title_link
       &_link {
-        color: $light-blue;
+        color: #1a79ff;
         text-decoration: underline;
       }
+    }
+    // store__status
+    &__status {
+      @include font(1rem, 500, 1rem, $dark);
     }
   }
 }

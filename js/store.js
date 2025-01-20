@@ -22,25 +22,25 @@ class Store {
         </figure>
         <div>
           <div class="store__info">
-            <i class="fa-solid fa-location-dot"></i>
+            <img src="../assets/icons/store/location.svg"/>
             <div>
               <h3 class="store__title">${this.name}</h3>
               <h3 class="store__title">${this.address}</h3>
             </div>
           </div>
           <div class="store__info">
-            <i class="fa-regular fa-clock"></i>
+            <img src="../assets/icons/store/time.svg"/>
             <div>
               <h3 class="store__title">${this.workTime}</h3>
               <span class="store__status">Ochiq</span>
             </div>
           </div>
           <div class="store__info">
-            <i class="fa-solid fa-phone-volume"></i>
+            <img src="../assets/icons/store/phone.svg"/>
             <a href="tel:${this.phone}" class="store__title">${this.phone}</a>
           </div>
           <div class="store__info">
-            <i class="fa-solid fa-route"></i>
+            <img src="../assets/icons/store/map.svg"/>
             <a href="${
               this.location
             }" target="_blank" class="store__title store__title_link">Yoʻnalishlar uchun xaritaga qarang</a>
