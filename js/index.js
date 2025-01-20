@@ -144,7 +144,11 @@ class BestSelling {
             ${turncate(this.name, 34, "...")}
           </h3>
         </div>
-        <button class="best-selling-product__indetail">Batafsil</button>
+        <button data-product='${JSON.stringify({
+          name: this.name,
+          img: this.img,
+          details: this.details,
+        })}' class="best-selling-product__indetail">Batafsil</button>
       </div>
       `;
     return element;
@@ -155,7 +159,7 @@ const bestSellingData = [
   {
     img: "../assets/img/best-selling/Iphone-15.png",
     name: "Smartfon Samsung Galaxy A06 4/128, Qora",
-    details: {},
+    details: { model: "ops" },
   },
   {
     img: "../assets/img/best-selling/vivo.png",
@@ -435,4 +439,49 @@ searchInput.addEventListener("input", (e) => {
     item.name.toLocaleLowerCase().includes(query.toLocaleLowerCase())
   );
   renderBranches(filteredBranches);
+});
+
+// MODAL
+const modal = document.createElement("div");
+modal.classList.add("modal-wrap");
+modal.innerHTML = `
+  <div class="modal">
+    <div class="modal__img"><img src="" alt=""></div>
+    <div class="modal__details">
+      <div class="modal__close"><i class="fa-solid fa-xmark"></i></div>
+      <h3 class="modal__title"></h3>
+      <p class="modal__description"></p>
+    </div>
+  </div>
+`;
+document.body.append(modal);
+
+const modalClose = modal.querySelector(".modal__close");
+modalClose.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    modal.style.display = "none";
+  }
+});
+
+const products = document.querySelectorAll(".best-selling-product");
+
+products.forEach((btn) => {
+  btn.addEventListener("click", (evt) => {
+    if (evt.target && evt.target.tagName === "BUTTON") {
+      try {
+        const productData = JSON.parse(evt.target.getAttribute("data-product"));
+        modal.querySelector(".modal__img img").src = productData.img;
+        modal.querySelector(".modal__title").textContent = productData.name;
+        modal.querySelector(".modal__description").textContent =
+          "Lorem ipsum dolor sit amet consectetur adipisicing.";
+        modal.style.display = "flex";
+      } catch (error) {
+        console.error("Failed to parse product data:", error);
+      }
+    }
+  });
 });
