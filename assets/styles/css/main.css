@@ -754,14 +754,20 @@ a {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.2rem;
-  color: #1f3664;
+  color: #111827;
 }
 .faq-list .accordion span {
   padding: 0 15px;
   font-size: 1.5rem;
+  color: #1f3664;
 }
 .faq-list .accordion.active, .faq-list .accordion:hover {
-  background-color: rgba(51, 50, 50, 0.4);
+  background-color: #1f3664;
+  color: #fff;
+}
+.faq-list .accordion.active:after,
+.faq-list .accordion.active span, .faq-list .accordion:hover:after,
+.faq-list .accordion:hover span {
   color: #fff;
 }
 .faq-list .accordion:after {
@@ -776,10 +782,11 @@ a {
 }
 .faq-list .accordion.active:after {
   content: "−";
+  color: #fff;
 }
 .faq-list .panel {
   padding: 0 18px;
-  background-color: rgba(51, 50, 50, 0.7);
+  background-color: #f9f9f9;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -788,7 +795,7 @@ a {
 .faq-list .panel p {
   font-size: 16px;
   margin: 10px;
-  color: #fff;
+  color: #111827;
 }
 
 .social-networks {
@@ -810,24 +817,12 @@ a {
   align-items: center;
   background: #fff;
   padding: 2rem 4rem;
-  border: 1px solid #016bd9;
-  border-radius: 8px;
+  border: 1px solid rgba(204, 204, 204, 0.6235294118);
+  border-radius: 28px;
   transition: all 0.15s ease;
 }
-.social-networks__item:first-child i {
-  color: #2fabeb;
-}
-.social-networks__item:nth-child(2) i {
-  color: #0866ff;
-}
-.social-networks__item:nth-child(3) i {
-  color: #e1475c;
-}
-.social-networks__item:last-child i {
-  color: #fd080a;
-}
 .social-networks__item:hover {
-  box-shadow: 0 0 25px 1px #1f3664;
+  box-shadow: 0 0 25px 1px #ddd;
 }
 .social-networks__item i {
   font-size: 3rem;

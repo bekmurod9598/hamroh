@@ -234,17 +234,22 @@
     cursor: pointer;
     transition: all 0.15s ease;
     text-align: left;
-    @include font(1.2rem, 600, 1.2rem, $blue);
+    @include font(1.2rem, 600, 1.2rem, $dark);
 
     span {
       padding: 0 15px;
       font-size: 1.5rem;
+      color: $blue;
     }
 
     &.active,
     &:hover {
-      background-color: rgb(51, 50, 50, 0.4);
+      background-color: $blue;
       color: #fff;
+      &:after,
+      span {
+        color: #fff;
+      }
     }
 
     &:after {
@@ -260,13 +265,14 @@
 
       &:after {
         content: "\2212";
+        color: #fff;
       }
     }
   }
 
   .panel {
     padding: 0 18px;
-    background-color: rgb(51, 50, 50, 0.7);
+    background-color: #f9f9f9;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
@@ -275,7 +281,7 @@
     p {
       font-size: 16px;
       margin: 10px;
-      color: $white;
+      color: $dark;
     }
   }
 }
@@ -297,28 +303,12 @@
     align-items: center;
     background: $white;
     padding: 2rem 4rem;
-    border: 1px solid $light-blue;
-    border-radius: 8px;
+    border: 1px solid #cccccc9f;
+    border-radius: 28px;
     transition: all 0.15s ease;
 
-    &:first-child i {
-      color: #2fabeb;
-    }
-
-    &:nth-child(2) i {
-      color: #0866ff;
-    }
-
-    &:nth-child(3) i {
-      color: #e1475c;
-    }
-
-    &:last-child i {
-      color: #fd080a;
-    }
-
     &:hover {
-      box-shadow: 0 0 25px 1px $blue;
+      box-shadow: 0 0 25px 1px #ddd;
     }
 
     i {
