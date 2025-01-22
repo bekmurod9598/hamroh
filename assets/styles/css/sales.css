@@ -437,9 +437,9 @@ a {
   margin-bottom: 1.5rem;
 }
 .footer .nav-list__item-link {
-  font-size: 1rem;
+  font-size: 1.31rem;
   font-weight: 400;
-  line-height: 0.75rem;
+  line-height: 1.6rem;
   color: #fff;
   transition: color 0.15s ease;
   display: flex;
@@ -448,7 +448,6 @@ a {
 }
 .footer .nav-list__item-link:hover, .footer .nav-list__item-link.active {
   color: #fdc901;
-  text-decoration: underline;
 }
 
 .sales-wrapper {

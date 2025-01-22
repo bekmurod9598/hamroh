@@ -31,7 +31,7 @@
     }
     // nav-list__item-link
     &-link {
-      @include font(1rem, 400, 0.75rem, $white);
+      @include font(1.31rem, 400, 1.6rem, $white);
       transition: color 0.15s ease;
       display: flex;
       align-items: center;
@@ -39,7 +39,6 @@
       &:hover,
       &.active {
         color: $yellow;
-        text-decoration: underline;
       }
     }
   }
