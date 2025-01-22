@@ -106,7 +106,7 @@ a {
   }
   // section__description
   &__description {
-    @include font(1rem, 400, 1.5rem, $dark);
+    @include font(1.2rem, 400, 2rem, $dark);
     margin-bottom: 1rem;
   }
 }
