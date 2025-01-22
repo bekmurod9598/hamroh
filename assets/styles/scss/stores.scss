@@ -88,6 +88,10 @@
     &__info {
       display: flex;
       gap: 1rem;
+      & > img {
+        width: 35px;
+        height: 35px;
+      }
       &:not(:last-child) {
         margin-bottom: 1.5rem;
       }

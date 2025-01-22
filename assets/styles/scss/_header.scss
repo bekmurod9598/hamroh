@@ -37,7 +37,7 @@
       // nav-list__item
       // nav-list__item-link
       &__item-link {
-        @include font(1rem, 300, 12px, $blue);
+        @include font(1.5rem, 400, 1.8rem, $blue);
         transition: color 0.15s ease;
         &:hover,
         &.active {
@@ -63,7 +63,7 @@
   }
   // header__phone
   &__phone {
-    @include font(0.875rem, 400, 0.75rem, $dark);
+    @include font(1.125rem, 400, 1.4rem, $blue);
     transition: color 0.15s ease;
     &:hover {
       color: $yellow;
@@ -71,7 +71,7 @@
   }
   // header__lang
   &__lang {
-    @include font(0.875rem, 400, 0.75rem, $dark);
+    @include font(1.125rem, 400, 1.36rem, $dark);
     background: none;
     cursor: pointer;
     transition: opacity 0.15s ease;

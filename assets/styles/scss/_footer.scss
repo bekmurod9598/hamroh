@@ -1,5 +1,4 @@
 .footer {
-  // background: #f3f4f6;
   background: $blue;
   padding: 3.25rem 0;
 }
@@ -21,12 +20,8 @@
   &-social-networks {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1.125rem;
     margin-top: 2rem;
-    a {
-      @include font(1.25rem, 400, 0.75rem, $yellow);
-      transition: opacity 0.15s ease;
-    }
   }
   // nav-list
   // nav-list__item

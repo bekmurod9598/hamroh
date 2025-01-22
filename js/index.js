@@ -469,11 +469,17 @@ document.addEventListener("keydown", (event) => {
 
 const products = document.querySelectorAll(".best-selling-product");
 
-products.forEach((btn) => {
-  btn.addEventListener("click", (evt) => {
-    if (evt.target && evt.target.tagName === "BUTTON") {
+products.forEach((product) => {
+  product.addEventListener("click", (evt) => {
+    if (
+      evt.target &&
+      (evt.target.tagName === "BUTTON" ||
+        evt.target.closest(".best-selling-product__img"))
+    ) {
       try {
-        const productData = JSON.parse(evt.target.getAttribute("data-product"));
+        const productData = JSON.parse(
+          product.querySelector("button").getAttribute("data-product")
+        );
         modal.querySelector(".modal__img img").src = productData.img;
         modal.querySelector(".modal__title").textContent = productData.name;
         modal.querySelector(".modal__description").textContent =

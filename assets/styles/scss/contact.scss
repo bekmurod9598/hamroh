@@ -5,7 +5,7 @@
 @import "footer";
 
 .form-wrap {
-  margin: 2rem 0 3rem;
+  margin-bottom: 8.75rem;
   // form-wrap__title
   &__title {
     @include font(2rem, 500, 2.5rem, $dark);
