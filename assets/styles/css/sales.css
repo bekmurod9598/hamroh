@@ -71,7 +71,7 @@ a {
   margin-bottom: 4rem;
 }
 .section__title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 2.5rem;
   color: #1f3664;
@@ -106,13 +106,13 @@ a {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.5rem;
-  color: #111827;
+  color: #1f3664;
 }
 .section__description {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 2rem;
-  color: #111827;
+  color: #1f3664;
   margin-bottom: 1rem;
 }
 
@@ -216,13 +216,13 @@ a {
   align-items: center;
   gap: 22px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 922px) {
   .header .nav-list {
     display: none;
   }
 }
 .header .nav-list__item-link {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.8rem;
   color: #1f3664;
@@ -237,7 +237,7 @@ a {
   align-items: center;
   gap: 1rem;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 922px) {
   .header .language {
     display: none;
   }
@@ -245,7 +245,7 @@ a {
 .header .hide-sidebar {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 922px) {
   .header .hide-sidebar {
     display: inline-block;
   }
@@ -282,7 +282,7 @@ a {
 .header #burger {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 922px) {
   .header #burger {
     display: inline-block;
   }

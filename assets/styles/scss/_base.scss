@@ -74,7 +74,7 @@ a {
   margin-bottom: 4rem;
   // section__title
   &__title {
-    @include font(2rem, 700, 2.5rem, $blue);
+    @include font(1.8rem, 700, 2.5rem, $blue);
     margin-bottom: 2rem;
     @media screen and (max-width: 768px) {
       font-size: 2rem;
@@ -102,11 +102,11 @@ a {
   }
   // section__subtitle
   &__subtitle {
-    @include font(1.2rem, 600, 1.5rem, $dark);
+    @include font(1.2rem, 600, 1.5rem, $blue);
   }
   // section__description
   &__description {
-    @include font(1.2rem, 400, 2rem, $dark);
+    @include font(1.2rem, 400, 2rem, $blue);
     margin-bottom: 1rem;
   }
 }

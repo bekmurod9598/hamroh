@@ -31,13 +31,13 @@
       display: flex;
       align-items: center;
       gap: 22px;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 922px) {
         display: none;
       }
       // nav-list__item
       // nav-list__item-link
       &__item-link {
-        @include font(1.5rem, 400, 1.8rem, $blue);
+        @include font(1.2rem, 400, 1.8rem, $blue);
         transition: color 0.15s ease;
         &:hover,
         &.active {
@@ -51,13 +51,13 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 922px) {
       display: none;
     }
   }
   .hide-sidebar {
     display: none;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 922px) {
       display: inline-block;
     }
   }
@@ -88,7 +88,7 @@
   }
   #burger {
     display: none;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 922px) {
       display: inline-block;
     }
   }

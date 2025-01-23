@@ -13,10 +13,13 @@ class Slider {
     const element = document.createElement("div");
     element.classList.add("swiper-slide"); // Slides
     element.innerHTML = `
-      <img
-        src="${this.img}"
-        alt="${this.alt}"
-      />
+      <picture>
+        <source srcset="${this.img.mobileM}" type="image/jpg" media="(max-width: 375px)">
+        <source srcset="${this.img.mobileL}" type="image/jpg" media="(max-width: 425px)">
+        <source srcset="${this.img.tablet}" type="image/jpg" media="(max-width: 768px)">
+        <source srcset="${this.img.laptop}" type="image/jpg" media="(max-width: 1024px)">
+        <img src="${this.img.default}" alt="${this.alt}" style="max-width: 100%; height: auto;">
+      </picture>
     `;
     return element;
   }
@@ -25,19 +28,43 @@ class Slider {
 let fragment = new DocumentFragment();
 const sliders = [
   {
-    img: "../assets/img/slider/Fayzli-yakshanba-aksiyasi.jpg",
+    img: {
+      default: "../assets/img/slider/Fayzli-yakshanba-aksiyasi.jpg",
+      laptop: "",
+      tablet: "",
+      mobileL: "",
+      mobileM: "",
+    },
     alt: "Fayzli-yakshanba-aksiyasi",
   },
   {
-    img: "../assets/img/slider/Fayzli-yakshanba-aksiyasi-3.jpg",
+    img: {
+      default: "../assets/img/slider/Telefonlar-o'z-narxida-default.jpg",
+      laptop: "../assets/img/slider/Telefonlar-o'z-narxida-laptop.jpg",
+      tablet: "../assets/img/slider/Telefonlar-o'z-narxida-tablet.jpg",
+      mobileL: "../assets/img/slider/Telefonlar-o'z-narxida-mobileL.jpg",
+      mobileM: "../assets/img/slider/Telefonlar-o'z-narxida-mobileM.jpg",
+    },
     alt: "Fayzli-yakshanba-aksiyasi",
   },
   {
-    img: "../assets/img/slider/Fayzli-yakshanba-aksiyasi-4.jpg",
+    img: {
+      default: "../assets/img/slider/Fayzli-yakshanba-aksiyasi-4.jpg",
+      laptop: "",
+      tablet: "",
+      mobileL: "",
+      mobileM: "",
+    },
     alt: "Fayzli-yakshanba-aksiyasi",
   },
   {
-    img: "../assets/img/slider/chegirma.jpg",
+    img: {
+      default: "../assets/img/slider/chegirma.jpg",
+      laptop: "",
+      tablet: "",
+      mobileL: "",
+      mobileM: "",
+    },
     alt: "40% chegirma",
   },
 ];
@@ -138,7 +165,7 @@ class BestSelling {
       <div class="best-selling-product">
         <div>
           <figure class="best-selling-product__img">
-            <img src="${this.img}" alt="${this.name}">
+            <img src="${this.img}" loading="lazy" alt="${this.name}">
           </figure>
           <h3 class="best-selling-product__name">
             ${turncate(this.name, 34, "...")}
@@ -446,6 +473,7 @@ const modal = document.createElement("div");
 modal.classList.add("modal-wrap");
 modal.innerHTML = `
   <div class="modal">
+    <div class="modal__close modal__close_mobile"><i class="fa-solid fa-xmark"></i></div>
     <div class="modal__img"><img src="" alt=""></div>
     <div class="modal__details">
       <div class="modal__close"><i class="fa-solid fa-xmark"></i></div>

@@ -5,7 +5,11 @@
   // background: #f4f5f7;
   background: url("../../img/atlas.png");
   border-radius: 20px;
-  @media screen and (max-width: 768px) {
+  overflow: hidden;
+  @media screen and (max-width: 940px) {
+    height: 450px;
+  }
+  @media screen and (max-width: 852px) {
     flex-direction: column;
     height: auto;
   }
@@ -18,10 +22,6 @@
     @media screen and (max-width: 1040px) {
       padding: 2rem;
     }
-    @media screen and (max-width: 768px) {
-      // padding: 2rem;
-      flex-direction: row;
-    }
     @media screen and (max-width: 576px) {
       padding: 1rem;
     }
@@ -30,16 +30,32 @@
   &_bg {
     height: 600px;
     background: $blue;
+    @media screen and (max-width: 1024px) {
+      height: 500px;
+    }
+    @media screen and (max-width: 970px) {
+      height: 450px;
+    }
+    @media screen and (max-width: 852px) {
+      height: auto;
+    }
   }
   // vacancy__title
   &__title {
     @include font(3.5rem, 600, 4rem, $blue);
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
+      font-size: 3rem;
+    }
+    @media screen and (max-width: 970px) {
       font-size: 2.5rem;
       line-height: 3rem;
     }
+    @media screen and (max-width: 768px) {
+      font-size: 2.2rem;
+      line-height: 2.5rem;
+    }
     @media screen and (max-width: 576px) {
-      font-size: 2rem;
+      font-size: 1.8rem;
       line-height: 2rem;
     }
     // vacancy__title_color
@@ -50,6 +66,13 @@
   // vacancy-list
   &-list {
     margin-top: 34px;
+    margin-bottom: 1rem;
+    @media screen and (max-width: 980px) {
+      margin-top: 24px;
+      .vacancy-list__item {
+        line-height: 2rem;
+      }
+    }
     // vacancy-list__item
     &__item {
       margin-left: 2rem;
@@ -68,7 +91,10 @@
     display: flex;
     align-items: end;
     justify-content: center;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 940px) {
+      width: 450px;
+    }
+    @media screen and (max-width: 852px) {
       width: 100%;
       height: 300px;
       img {
@@ -79,10 +105,25 @@
     // vacancy__figure_bg
     &_bg {
       width: 550px;
+      height: auto;
       background: $yellow;
+      @media screen and (max-width: 1024px) {
+        width: 500px;
+      }
+      @media screen and (max-width: 970px) {
+        width: 450px;
+      }
+      @media screen and (max-width: 852px) {
+        width: 100%;
+        img {
+          width: 50% !important;
+          height: 50% !important;
+        }
+      }
     }
     img {
-      width: 100%;
+      width: auto;
+      height: 90%;
     }
   }
 }
