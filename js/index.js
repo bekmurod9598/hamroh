@@ -249,9 +249,7 @@ bestSellingData.forEach((item) => {
   bestSellingFragment.append(el.render());
 });
 
-document
-  .querySelector(".section .best-selling-wrap")
-  .append(bestSellingFragment);
+document.querySelector(".best-selling-wrap").append(bestSellingFragment);
 /** SHORT SALES */
 class ShortSales {
   constructor(img, alt = "", validityPeriod, title, description, view) {
