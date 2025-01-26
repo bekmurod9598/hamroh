@@ -18,7 +18,7 @@ class Slider {
         <source srcset="${this.img.mobileL}" type="image/jpg" media="(max-width: 425px)">
         <source srcset="${this.img.tablet}" type="image/jpg" media="(max-width: 768px)">
         <source srcset="${this.img.laptop}" type="image/jpg" media="(max-width: 1024px)">
-        <img src="${this.img.default}" alt="${this.alt}" style="max-width: 100%; height: auto;">
+        <img src="${this.img.default}" alt="${this.alt}" style="max-width: 100%; height: 100%;">
       </picture>
     `;
     return element;
@@ -49,11 +49,11 @@ const sliders = [
   },
   {
     img: {
-      default: "../assets/img/slider/Fayzli-yakshanba-aksiyasi-4.jpg",
-      laptop: "",
-      tablet: "",
-      mobileL: "",
-      mobileM: "",
+      default: "../assets/img/slider/Maishiy-texnikalar-default.jpg",
+      laptop: "../assets/img/slider/Maishiy-texnikalarga-laptop.jpg",
+      tablet: "../assets/img/slider/Maishiy-texnikalarga-tablet.jpg",
+      mobileL: "../assets/img/slider/Maishiy-texnikalarga-mobileL.jpg",
+      mobileM: "../assets/img/slider/Maishiy-texnikalarga-mobileM.jpg",
     },
     alt: "Fayzli-yakshanba-aksiyasi",
   },
@@ -78,9 +78,9 @@ document.querySelector(".swiper-wrapper").append(fragment);
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   loop: true, // Loop through slides
-  autoplay: {
-    delay: 5000, // Auto-slide every 3 seconds
-  },
+  // autoplay: {
+  //   delay: 5000, // Auto-slide every 3 seconds
+  // },
   speed: 500,
 
   // If we need pagination
