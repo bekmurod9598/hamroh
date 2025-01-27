@@ -752,7 +752,7 @@ a {
   height: 240px;
   border-radius: 12px;
   overflow: hidden;
-  background: rgba(31, 54, 100, 0.2509803922);
+  background: #f3f5f7;
   padding: 30px 20px;
   display: flex;
   align-items: center;
