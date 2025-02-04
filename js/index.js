@@ -3,6 +3,7 @@ import { parametrs } from "../helpers/options.js";
 import { turncate } from "../helpers/global.js";
 
 /** SLIDER */
+/*
 class Slider {
   constructor(img, alt = "") {
     this.img = img;
@@ -94,6 +95,7 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+*/
 
 /** CATEGORIES */
 class Category {
