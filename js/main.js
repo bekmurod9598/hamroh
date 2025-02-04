@@ -1,5 +1,6 @@
 "use strict";
 
+/*
 // Dynamic navbar
 const pages = [
   {
@@ -46,6 +47,7 @@ const headerFragment = new DocumentFragment();
 const footerFragment = new DocumentFragment();
 const siderbarFragment = new DocumentFragment();
 
+
 if (headerNavbar && footerNavbar && sidebarList) {
   pages.forEach((page) => {
     const headerLi = document.createElement("li");
@@ -62,7 +64,7 @@ if (headerNavbar && footerNavbar && sidebarList) {
       link.classList.add("active");
     }
     headerLi.append(link);
-    headerFragment.append(headerLi);
+    // headerFragment.append(headerLi);
 
     // Footer link (independent from header)
     const footerLi = headerLi.cloneNode(true); // Clone header link for footer
@@ -76,6 +78,7 @@ if (headerNavbar && footerNavbar && sidebarList) {
 headerNavbar.append(headerFragment);
 footerNavbar.append(footerFragment);
 sidebarList.append(siderbarFragment);
+*/
 
 const sidebar = document.querySelector(".header .sidebar");
 const burgerBtn = document.querySelector("#burger");
