@@ -93,3 +93,19 @@ hideBtn.addEventListener("click", () => {
   document.body.style.overflow = "visible";
   sidebar.classList.remove("active");
 });
+
+let isOpenLocale = false;
+const localeBtn = document.querySelector(".header__lang");
+const localeList = document.querySelector(".locale-list");
+const localeListItem = document.querySelectorAll(
+  ".locale-list .locale-list__item"
+);
+
+localeBtn.addEventListener("click", () => {
+  localeList.classList.toggle("active");
+});
+localeListItem.forEach((item) => {
+  item.addEventListener("click", () => {
+    localeList.classList.toggle("active");
+  });
+});

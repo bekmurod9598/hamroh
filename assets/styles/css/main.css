@@ -280,6 +280,48 @@ a {
 .header__lang:hover {
   opacity: 0.7;
 }
+.header .locale {
+  position: relative;
+}
+.header .locale-list {
+  position: absolute;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3843137255);
+  padding: 12px 6px;
+  width: 100px;
+  border-radius: 12px;
+  transition: all 0.15s linear;
+  transform: translateY(10px);
+  opacity: 0;
+  visibility: hidden;
+}
+.header .locale-list.active {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.header .locale-list__item {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.36rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+}
+.header .locale-list__item:hover {
+  background: #fdc901;
+}
+.header .locale-list__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+.header .locale-list__item img {
+  width: 24px;
+  height: 16px;
+}
 .header #burger {
   display: none;
 }
