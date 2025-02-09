@@ -156,6 +156,7 @@ document.querySelector(".main .categories").append(categoryFragment);
 */
 
 // BEST SELLING
+/*
 class BestSelling {
   constructor(img, name, details) {
     this.img = img;
@@ -254,6 +255,7 @@ bestSellingData.forEach((item) => {
 });
 
 document.querySelector(".best-selling-wrap").append(bestSellingFragment);
+*/
 /** SHORT SALES */
 class ShortSales {
   constructor(img, alt = "", validityPeriod, title, description, view) {
@@ -486,17 +488,23 @@ modal.innerHTML = `
 `;
 document.body.append(modal);
 
+// When the user clicks on modalClose, close the modal
 const modalClose = modal.querySelector(".modal__close");
-modalClose.addEventListener("click", () => {
+modalClose.onclick = function () {
   modal.style.display = "none";
-});
-
+};
+// When the user presses the Esc key, close the modal
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     modal.style.display = "none";
   }
 });
-
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
 const products = document.querySelectorAll(".best-selling-product");
 
 products.forEach((product) => {
