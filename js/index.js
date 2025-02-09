@@ -98,6 +98,7 @@ const swiper = new Swiper(".swiper", {
 });
 
 /** CATEGORIES */
+/*
 class Category {
   constructor(img, alt = "", title) {
     this.img = img;
@@ -152,6 +153,7 @@ categories.forEach((item) => {
 });
 
 document.querySelector(".main .categories").append(categoryFragment);
+*/
 
 // BEST SELLING
 class BestSelling {
