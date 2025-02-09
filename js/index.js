@@ -256,7 +256,9 @@ bestSellingData.forEach((item) => {
 
 document.querySelector(".best-selling-wrap").append(bestSellingFragment);
 */
+
 /** SHORT SALES */
+/*
 class ShortSales {
   constructor(img, alt = "", validityPeriod, title, description, view) {
     this.img = img;
@@ -352,6 +354,7 @@ shortSales.forEach((item, index) => {
 });
 
 document.querySelector(".section .short-sales").append(shortSalesFragment);
+*/
 
 /** FAQ */
 // ACCORDION
@@ -371,7 +374,7 @@ accordion.forEach((acc) => {
 });
 
 /** STORE ADDRESS */
-
+/*
 // select input
 const { regions } = parametrs;
 
@@ -471,6 +474,7 @@ searchInput.addEventListener("input", (e) => {
   );
   renderBranches(filteredBranches);
 });
+*/
 
 // MODAL
 const modal = document.createElement("div");

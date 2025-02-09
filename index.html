@@ -97,7 +97,7 @@
           <div class="swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-              <!-- Slides -->
+              <!-- Slides | shu div LOOP boladi -->
               <div class="swiper-slide">
                 <picture>
                   <source
@@ -146,7 +146,7 @@
 
           <!-- categories -->
           <div class="categories">
-            <!-- category item | shu item loop qilinadi! -->
+            <!-- category item | shu item LOOP qilinadi! -->
             <div class="categories__card">
               <figure class="categories__card-img">
                 <img
@@ -166,7 +166,7 @@
           </h2>
 
           <div class="best-selling-wrap">
-            <!-- best selling item -->
+            <!-- best selling item |  shu div LOOP boladi -->
             <div class="best-selling-product">
               <div>
                 <figure class="best-selling-product__img">
@@ -265,9 +265,43 @@
               <i class="fa-solid fa-arrow-right-long"></i>
             </a>
           </div>
-          <div class="short-sales"></div>
+          <div class="short-sales">
+            <!-- chegirma item | shu article LOOP bo'ladi -->
+            <article class="sales-card">
+              <!-- img -->
+              <figure class="sales-card__figure">
+                <img
+                  class="sales-card__figure-img"
+                  loading="lazy"
+                  src="./assets/img/sales/chegirma.jpg"
+                  alt="0-0-6” Aksiyasi"
+                />
+              </figure>
+              <!-- description -->
+              <div class="sales-card__info">
+                <div>
+                  <span class="sales-card__datetime">
+                    18.09.2024 - 25.09.2024
+                  </span>
+                  <h3 class="sales-card__title">0-0-6” Aksiyasi</h3>
+                  <p class="sales-card__description">
+                    Belgilangan turdagi smartfonlarni 0-0-6 aksiyasi doirasida
+                    xarib qiling
+                  </p>
+                </div>
+
+                <div class="sales-card__action">
+                  <span><i class="fa-regular fa-eye"></i> 24</span>
+                  <a href="pages/sales-slug.html">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
         </section>
 
+        <!-- HORIZONTAL DEVIDER LINE -->
         <div
           style="
             width: 100%;
@@ -352,7 +386,10 @@
           <div class="store-branches-wrapper" style="margin-top: 2rem">
             <!-- store branches -->
             <div class="store-branches">
-              <select class="select-input" name="areas" id="areas"></select>
+              <select class="select-input" name="areas" id="areas">
+                <option value="1">Qoqon</option>
+                <option value="2">Toshkent</option>
+              </select>
               <!-- search input -->
               <input
                 class="store-branches__search-input"
@@ -363,7 +400,29 @@
               <div
                 id="branches"
                 style="display: flex; flex-direction: column; gap: 1rem"
-              ></div>
+              >
+                <div class="store-branches__item">
+                  <div style="display: flex; gap: 0.75rem; margin-bottom: 12px">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                      <h3 class="store-branches__item-title">Qoqon</h3>
+                      <span class="store-branches__item-subtitle">
+                        Lorem ipsum dolor sit amet.
+                      </span>
+                    </div>
+                  </div>
+                  <div style="display: flex; gap: 0.75rem">
+                    <i class="fa-regular fa-clock"></i>
+                    <div style="width: 100%">
+                      <h3 class="store-branches__item-title">
+                        08:30 - 17:00
+                        <span>Qish mavsumi</span>
+                      </h3>
+                      <span class="store-branches__item-subtitle">Ochiq</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- map -->
