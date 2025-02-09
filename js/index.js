@@ -75,13 +75,14 @@ sliders.forEach((item) => {
   fragment.append(el.render());
 });
 document.querySelector(".swiper-wrapper").append(fragment);
+*/
 
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   loop: true, // Loop through slides
-  // autoplay: {
-  //   delay: 5000, // Auto-slide every 3 seconds
-  // },
+  autoplay: {
+    delay: 5000, // Auto-slide every 3 seconds
+  },
   speed: 500,
 
   // If we need pagination
@@ -95,7 +96,6 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-*/
 
 /** CATEGORIES */
 class Category {
