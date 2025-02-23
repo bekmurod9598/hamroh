@@ -59,7 +59,9 @@ let stores = [];
 const area = document.querySelector(".form #area");
 const city = document.querySelector(".form #city");
 const submit = document.querySelector(".form #submit");
-const clearBtn = document.querySelector(".form #clear-btn"); // Clear button
+const modalArea = document.querySelector("#filter-burder-nav #area");
+const modalCity = document.querySelector("#filter-burder-nav #city");
+// const clearBtn = document.querySelector(".form #clear-btn"); // Clear button
 
 // Fill area select options
 regions.forEach((item) => {
@@ -68,25 +70,28 @@ regions.forEach((item) => {
   option.value = item.id;
   option.innerText = item.name;
   area.appendChild(option);
+  modalArea.appendChild(option);
 });
 
 // Fill city select options (Initially all cities)
 function fillCityOptions() {
   // Clear previous city options
   city.innerHTML = "<option value='0'>Shaharni tanlang</option>";
+  modalCity.innerHTML = "<option value='0'>Shaharni tanlang</option>";
 
   stores.forEach((item) => {
     const option = document.createElement("option");
     option.value = item.id;
     option.innerText = item.name;
     city.appendChild(option);
+    modalCity.appendChild(option);
   });
 }
-
 // Function to update city options based on selected area
 function updateCityOptions(areaId) {
   // Clear existing city options
   city.innerHTML = "<option value='0'>Shaharni tanlang</option>";
+  modalCity.innerHTML = "<option value='0'>Shaharni tanlang</option>";
 
   // If area is selected, filter cities by that area
   if (areaId !== "0" && areaId !== "") {
@@ -99,6 +104,7 @@ function updateCityOptions(areaId) {
         option.value = branch.id;
         option.innerText = branch.name;
         city.appendChild(option);
+        modalCity.appendChild(option);
       });
     }
   } else {
@@ -123,7 +129,6 @@ function filterStores(areaId, cityId) {
     return [...filteredStores, ...filteredBranches];
   }, []);
 }
-
 // Apply filters and update view
 function applyFilters() {
   const filteredStores = filterStores(filterState.areaId, filterState.cityId);
@@ -138,15 +143,35 @@ area.addEventListener("change", (e) => {
   updateCityOptions(filterState.areaId); // Update city options based on selected area
   // applyFilters();
 });
-
+modalArea.addEventListener("change", (e) => {
+  filterState.areaId = e.target.value;
+  updateCityOptions(filterState.areaId); // Update city options based on selected area
+  // applyFilters();
+});
 city.addEventListener("change", (e) => {
   filterState.cityId = e.target.value;
   // applyFilters();
 });
-
+modalCity.addEventListener("change", (e) => {
+  filterState.cityId = e.target.value;
+  // applyFilters();
+});
 submit.addEventListener("click", (e) => {
   e.preventDefault();
   applyFilters();
+});
+
+// MODAL FLITER BUTTON
+const filterBtn = document.querySelector("#filter-burger");
+const filterModal = document.querySelector("#filter-burder-nav");
+const submitModal = filterModal.querySelector(".form #submit");
+filterBtn.addEventListener("click", () => {
+  filterModal.classList.toggle("active");
+});
+submitModal.addEventListener("click", (e) => {
+  e.preventDefault();
+  applyFilters();
+  filterModal.classList.toggle("active");
 });
 
 // Clear button event listener to reset the filters

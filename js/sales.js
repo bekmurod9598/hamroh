@@ -1,4 +1,5 @@
 "use strict";
+/*
 import { turncate } from "../helpers/global.js";
 class Sales {
   constructor(img, alt = "", validityPeriod, title, description, view) {
@@ -128,10 +129,14 @@ function renderSales(params) {
   container.append(fragment);
 }
 renderSales(sales);
+*/
+
 // LOAD MORE
+/*
 const loadMore = document.querySelector("#sales #load-more");
 
 loadMore.addEventListener("click", () => {
   sales.push(...sales.slice(0, 6));
   renderSales(sales);
 });
+*/

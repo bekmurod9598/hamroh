@@ -10,6 +10,9 @@
     align-items: center;
     gap: 2rem;
     margin-top: 3rem;
+    @media screen and (max-width: 574px) {
+      display: none;
+    }
     // form-input
     &-input {
       display: flex;
@@ -24,6 +27,9 @@
         padding: 0.8rem 1rem;
         border: 1px solid $light-dark;
         border-radius: 8px;
+        @media screen and (max-width: 950px) {
+          width: auto;
+        }
       }
     }
     button {
@@ -145,6 +151,69 @@
     &:disabled {
       background-color: lightgray;
       cursor: not-allowed;
+    }
+  }
+}
+
+#filter-burder-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  // height: 250px;
+  width: 100%;
+  padding: 12px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  transform: translateY(100%);
+  transition: all 0.15s linear;
+  &.active {
+    transform: translateY(0);
+  }
+  .form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+
+    // form-input
+    &-input {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      label {
+        @include font(1.2rem, 600, 1.5rem, $blue);
+      }
+      select {
+        @include font(1rem, 600, 1rem, $dark);
+        width: 350px;
+        padding: 0.8rem 1rem;
+        border: 1px solid $light-dark;
+        border-radius: 8px;
+        @media screen and (max-width: 950px) {
+          width: auto;
+        }
+      }
+    }
+    button {
+      @include font(1rem, 600, 1rem, $white);
+      width: 200px;
+      min-width: 120px;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid $light-blue;
+      background: $light-blue;
+      cursor: pointer;
+      transition: opacity 0.15s ease;
+      align-self: flex-end;
+      &:hover {
+        opacity: 0.7;
+      }
+      // &:last-child{
+      //   background: #ddd;
+      //   border-color: #ddd;
+      //   color: $dark;
+      // }
     }
   }
 }

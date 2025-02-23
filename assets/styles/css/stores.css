@@ -34,6 +34,11 @@ a {
   text-decoration: none;
 }
 
+#burger i,
+#filter-burger i {
+  color: #1f3664;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -65,6 +70,11 @@ a {
   font-weight: 700;
   line-height: 2rem;
   color: #1f3664;
+}
+@media screen and (max-width: 574px) {
+  .main__title {
+    font-size: 1.6rem;
+  }
 }
 
 .section {
@@ -422,6 +432,11 @@ a {
   gap: 2rem;
   margin-top: 3rem;
 }
+@media screen and (max-width: 574px) {
+  .main .form {
+    display: none;
+  }
+}
 .main .form-input {
   display: flex;
   flex-direction: column;
@@ -442,6 +457,11 @@ a {
   padding: 0.8rem 1rem;
   border: 1px solid rgba(33, 33, 33, 0.5019607843);
   border-radius: 8px;
+}
+@media screen and (max-width: 950px) {
+  .main .form-input select {
+    width: auto;
+  }
 }
 .main .form button {
   font-size: 1rem;
@@ -565,6 +585,72 @@ a {
 #pagination-controls button:disabled {
   background-color: lightgray;
   cursor: not-allowed;
+}
+
+#filter-burder-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  transform: translateY(100%);
+  transition: all 0.15s linear;
+}
+#filter-burder-nav.active {
+  transform: translateY(0);
+}
+#filter-burder-nav .form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+#filter-burder-nav .form-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+#filter-burder-nav .form-input label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: #1f3664;
+}
+#filter-burder-nav .form-input select {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
+  color: #111827;
+  width: 350px;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(33, 33, 33, 0.5019607843);
+  border-radius: 8px;
+}
+@media screen and (max-width: 950px) {
+  #filter-burder-nav .form-input select {
+    width: auto;
+  }
+}
+#filter-burder-nav .form button {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1rem;
+  color: #fff;
+  width: 200px;
+  min-width: 120px;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #016bd9;
+  background: #016bd9;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  align-self: flex-end;
+}
+#filter-burder-nav .form button:hover {
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=stores.css.map */
