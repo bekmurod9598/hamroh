@@ -493,8 +493,14 @@ modal.innerHTML = `
 document.body.append(modal);
 
 // When the user clicks on modalClose, close the modal
-const modalClose = modal.querySelector(".modal__close");
+const modalClose = modal.querySelector(".modal__details .modal__close");
+const modalCloseMobile = modal.querySelector(".modal__close_mobile");
 modalClose.onclick = function () {
+  console.log("hide");
+  modal.style.display = "none";
+};
+modalCloseMobile.onclick = function () {
+  console.log("hide");
   modal.style.display = "none";
 };
 // When the user presses the Esc key, close the modal
