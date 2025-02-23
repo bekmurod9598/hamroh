@@ -35,6 +35,11 @@ a {
   text-decoration: none;
 }
 
+#burger i,
+#filter-burger i {
+  color: #1f3664;
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -66,6 +71,11 @@ a {
   font-weight: 700;
   line-height: 2rem;
   color: #1f3664;
+}
+@media screen and (max-width: 574px) {
+  .main__title {
+    font-size: 1.6rem;
+  }
 }
 
 .section {
@@ -389,6 +399,76 @@ a {
   height: 260px;
   overflow: hidden;
   background: #eee;
+}
+@media screen and (max-width: 1224px) {
+  .sales-card__figure {
+    height: 240px;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .sales-card__figure {
+    height: 220px;
+  }
+}
+@media screen and (max-width: 1085px) {
+  .sales-card__figure {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 980px) {
+  .sales-card__figure {
+    height: 180px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .sales-card__figure {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .sales-card__figure {
+    height: 180px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .sales-card__figure {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .sales-card__figure {
+    height: 320px;
+  }
+}
+@media screen and (max-width: 489px) {
+  .sales-card__figure {
+    height: 290px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .sales-card__figure {
+    height: 260px;
+  }
+}
+@media screen and (max-width: 410px) {
+  .sales-card__figure {
+    height: 240px;
+  }
+}
+@media screen and (max-width: 379px) {
+  .sales-card__figure {
+    height: 220px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .sales-card__figure {
+    height: 203px;
+  }
+}
+@media screen and (max-width: 325px) {
+  .sales-card__figure {
+    height: 188px;
+  }
 }
 .sales-card__figure-img {
   width: 100%;
@@ -802,7 +882,8 @@ a {
 }
 .best-selling-wrap .best-selling-product__img img {
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: scale-down;
 }
 .best-selling-wrap .best-selling-product__name {
   font-size: 18px;
